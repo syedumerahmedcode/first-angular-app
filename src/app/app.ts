@@ -18,6 +18,7 @@ export class App {
   isActive:boolean=true;
   fruitName:string='apple';
   username:string='Max Mustermann';
+  textValue:string='The value is coming from the component';
 
   buttonClick(){
     console.log('button clicked via enent binding');    
@@ -39,5 +40,9 @@ export class App {
   updateUserName(username:HTMLInputElement){
     this.username=username.value;
     console.log(this.username);
+  }
+
+  onKeyUp(){
+    console.log(this.textValue);
   }
 }

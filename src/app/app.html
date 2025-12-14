@@ -34,6 +34,12 @@
   <!--two way data binding-->
   <!-- <input type="text" [value]="username" #username (keyup.enter)="updateUserName(username)"> -->
 
-  <input type="text" [(ngModel)]="username">
+  <!-- <input type="text" [(ngModel)]="username">
   <h3>{{username}}</h3>
+   -->
+
+   <!--one way data binding vs two way data binding-->
+   <input type="text" [value]='textValue' (keyup.enter)="onKeyUp()">
+<br>
+    <input type="text" [(ngModel)]='textValue' (keyup.enter)="onKeyUp()">
 
