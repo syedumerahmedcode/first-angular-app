@@ -6,3 +6,13 @@
 
 <img [src]="imgURL" alt=""/>
 <button [disabled]="isDisable">disable button</button>
+<!-- class binding-->
+ <button 
+ [class.active]="isActive" 
+ [class.no-active]="!isActive"
+ [class.active-border]="isActive"
+ [class.no-active-border]="!isActive" 
+ >
+ click me</button>
+ <!--style binding-->
+ <button [class.apple]="fruitName=='apple'">Fruit Ninja</button>
