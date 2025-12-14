@@ -16,3 +16,8 @@
  click me</button>
  <!--style binding-->
  <button [class.apple]="fruitName=='apple'">Fruit Ninja</button>
+
+ <button 
+ [style.background]="isActive?'red':'green'"
+ [style.border]="isActive?'3px solid yellow':''"
+ >click</button>
