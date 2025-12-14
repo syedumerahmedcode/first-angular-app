@@ -24,7 +24,11 @@ export class App {
   keyEnter(event:any){
     console.log(event.keyCode);
     if(event.keyCode==13){
-      console.log('enter key pressed')
+      console.log('enter key pressed');
     }
+  }
+
+  keyUpFiltering(){
+    console.log('key up event filtering');
   }
 }
