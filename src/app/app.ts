@@ -21,7 +21,10 @@ export class App {
     console.log('button clicked via enent binding');    
   }
 
-  keyEnter(){
-    console.log('Key pressed');
+  keyEnter(event:any){
+    console.log(event.keyCode);
+    if(event.keyCode==13){
+      console.log('enter key pressed')
+    }
   }
 }
