@@ -5,14 +5,9 @@ import { Component } from "@angular/core";
     standalone: true,
     template: `<h1>Navbar Component</h1>
                 <p>Dummy paragraph</p>
-                <button>submit</button>`,
-    styles:  `h1{
-                color:red;
-                background: black
-                } `
-
-
-
+                <button>submit</button>`,   
+    templateUrl: './navbar.html',
+    styleUrl: './navbar.css'
 })
 
 export class AppNavbar {
