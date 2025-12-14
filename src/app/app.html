@@ -21,3 +21,9 @@
  [style.background]="isActive?'red':'green'"
  [style.border]="isActive?'3px solid yellow':''"
  >click</button>
+
+ <button [class.active]='isActive'>Class binding</button>
+
+ <!--Event biding-->
+ <button (click)="buttonClick()">Click me event binding</button>
+

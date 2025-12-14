@@ -16,4 +16,9 @@ export class App {
   isDisable: boolean=true;
   isActive:boolean=true;
   fruitName:string='apple';
+
+  buttonClick(){
+    console.log('button clicked via enent binding');
+    
+  }
 }
