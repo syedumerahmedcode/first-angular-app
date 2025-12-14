@@ -10,5 +10,6 @@ import { Header } from './header/header';
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('first-angular-app');
+  //protected readonly title = signal('first-angular-app');
+  title:string=' this loaded dynamically';
 }
