@@ -2,33 +2,33 @@
 
 
 <h2>{{title}}</h2>
-<p>{{1+1}}</p>
+<!-- <p>{{1+1}}</p>
 
 <img [src]="imgURL" alt=""/>
 <button [disabled]="isDisable">disable button</button>
 <!-- class binding-->
- <button 
+ <!-- <button 
  [class.active]="isActive" 
  [class.no-active]="!isActive"
  [class.active-border]="isActive"
  [class.no-active-border]="!isActive" 
  >
- click me</button>
+ click me</button> -->
  <!--style binding-->
- <button [class.apple]="fruitName=='apple'">Fruit Ninja</button>
+ <!-- <button [class.apple]="fruitName=='apple'">Fruit Ninja</button>
 
  <button 
  [style.background]="isActive?'red':'green'"
  [style.border]="isActive?'3px solid yellow':''"
  >click</button>
 
- <button [class.active]='isActive'>Class binding</button>
+ <button [class.active]='isActive'>Class binding</button> -->
 
  <!--Event biding-->
- <button (click)="buttonClick()">Click me event binding</button>
+ <!-- <button (click)="buttonClick()">Click me event binding</button>
 
 
- <input type="text" (keyup)="keyEnter($event)">
+ <input type="text" (keyup)="keyEnter($event)">  -->
 
- <input type="text" (keyup.enter)="keyUpFiltering()">
+ <input type="text" (keyup.enter)="keyUpFiltering(user)" #user id="userInput">
 

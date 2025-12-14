@@ -28,7 +28,9 @@ export class App {
     }
   }
 
-  keyUpFiltering(){
-    console.log('key up event filtering');
+  keyUpFiltering(user:HTMLInputElement){
+    console.log(user);
+    console.log(user.value);
+    console.log(user.id);
   }
 }
