@@ -18,7 +18,10 @@ export class App {
   fruitName:string='apple';
 
   buttonClick(){
-    console.log('button clicked via enent binding');
-    
+    console.log('button clicked via enent binding');    
+  }
+
+  keyEnter(){
+    console.log('Key pressed');
   }
 }
