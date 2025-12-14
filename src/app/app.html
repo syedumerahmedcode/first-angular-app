@@ -30,5 +30,7 @@
 
  <input type="text" (keyup)="keyEnter($event)">  -->
 
- <input type="text" (keyup.enter)="keyUpFiltering(user)" #user id="userInput">
+ <!-- <input type="text" (keyup.enter)="keyUpFiltering(user)" #user id="userInput"> -->
+  <!--two way data binding-->
+  <input type="text" [value]="username" #username (keyup.enter)="updateUserName(username)">
 

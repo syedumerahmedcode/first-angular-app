@@ -16,6 +16,7 @@ export class App {
   isDisable: boolean=true;
   isActive:boolean=true;
   fruitName:string='apple';
+  username:string='Max Mustermann';
 
   buttonClick(){
     console.log('button clicked via enent binding');    
@@ -32,5 +33,10 @@ export class App {
     console.log(user);
     console.log(user.value);
     console.log(user.id);
+  }
+
+  updateUserName(username:HTMLInputElement){
+    this.username=username.value;
+    console.log(this.username);
   }
 }
