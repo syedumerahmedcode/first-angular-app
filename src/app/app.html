@@ -88,15 +88,21 @@
 }
 <button (click)="countLoginAttempts()" *ngIf="loginCount<3">Log In</button>
 <h4 *ngIf="loginCount>=3">Exceeded 3 login attempts. Please try again later.</h4> -->
-@if (loginCount<3) {
+<!-- @if (loginCount<3) {
     <button (click)="countLoginAttempts()">Log In</button>
 }
 @if(loginCount>=3){
     <h4 >Exceeded 3 login attempts. Please try again later.</h4>
-}
+} -->
 
 <!--if directive with string values-->
-<h4 *ngIf="userRole=='Admin';else message">Welcome Admin</h4>
+<!-- <h4 *ngIf="userRole=='Admin';else message">Welcome Admin</h4>
 <ng-template #message>
     <h4>Welcome Member</h4>
-</ng-template>
+</ng-template> -->
+@if (userRole=='Admin') {
+    <h4 >Welcome Admin</h4>
+}
+@else if (userRole!='Admin') {
+    <h4>Welcome Member</h4>
+}
