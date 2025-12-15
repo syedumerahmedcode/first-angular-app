@@ -33,6 +33,10 @@ export class App {
       { id:3, name:'sam', email:'sam@gmail.com'  }, 
       { id:4, name:'Max', email:'max@gmail.com'  }, 
     ];
+
+    constructor(){
+      console.log(this.userObj.length);
+    }
   
     addNewUser(){
       let user={id:5,name:'User 1',email:'user1@gmail.com'};

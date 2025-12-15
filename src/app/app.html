@@ -150,16 +150,17 @@
         <li>{{user}}</li>
     }
 </ul> -->
-<!-- <ul>
-    <li *ngFor="let user of userObj; let i = index">
-       {{i}} {{user.id}} {{user.name}} {{user.email}} <button (click)="onDelete(i)">Delete</button>
+<ul>
+    <li *ngFor="let user of userObj; let i = index; let usersCount=count">
+       {{usersCount}} - {{i}} {{user.id}} {{user.name}} {{user.email}} 
+       <button (click)="onDelete(i)">Delete</button>
     </li>
-</ul> -->
+</ul>
 
 <ul>
-    @for (user   of userObj; track user;let i=$index) {
+    @for (user of userObj; track user;let i=$index; let usersCount=$count) {
     <li>
-       {{i}} {{user.id}} {{user.name}} {{user.email}}
+       {{usersCount}} {{i}} {{user.id}} {{user.name}} {{user.email}}
        <button (click)="onDelete(i)">Delete</button>
     </li>
     }
