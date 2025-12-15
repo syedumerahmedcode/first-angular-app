@@ -1,7 +1,7 @@
 <h1>First Angular App</h1>
 
 
-<h2>{{title}}</h2>
+<!-- <h2>{{title}}</h2> -->
 <!-- <p>{{1+1}}</p>
 
 <img [src]="imgURL" alt=""/>
@@ -39,7 +39,8 @@
    -->
 
    <!--one way data binding vs two way data binding-->
-   <input type="text" [value]='textValue' (keyup.enter)="onKeyUp()">
+  <!--  <input type="text" [value]='textValue' (keyup.enter)="onKeyUp()">
 <br>
-    <input type="text" [(ngModel)]='textValue' (keyup.enter)="onKeyUp()">
+    <input type="text" [(ngModel)]='textValue' (keyup.enter)="onKeyUp()"> -->
+    <h2 *ngIf="isLoggedIn">{{userName}}</h2>
 
