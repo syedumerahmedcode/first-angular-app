@@ -150,20 +150,20 @@
         <li>{{user}}</li>
     }
 </ul> -->
-<ul>
+<!-- <ul>
     <li *ngFor="let user of userObj; let i = index">
        {{i}} {{user.id}} {{user.name}} {{user.email}} <button (click)="onDelete(i)">Delete</button>
     </li>
-</ul>
+</ul> -->
 
-<!-- <ul>
-    @for (user   of userObj; track user) {
+<ul>
+    @for (user   of userObj; track user;let i=$index) {
     <li>
-       {{user.id}} {{user.name}} {{user.email}}
-       <button (click)="onDelete(user)">Delete</button>
+       {{i}} {{user.id}} {{user.name}} {{user.email}}
+       <button (click)="onDelete(i)">Delete</button>
     </li>
     }
-</ul>  -->
+</ul> 
 
 <!--Angular change detection Mechanism-->
 
