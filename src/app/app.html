@@ -100,14 +100,14 @@
 <ng-template #message>
     <h4>Welcome Member</h4>
 </ng-template> -->
-@if (userRole=='Admin') {
+<!-- @if (userRole=='Admin') {
     <h4 >Welcome Admin</h4>
 }
 @else if (userRole!='Admin') {
     <h4>Welcome Member</h4>
-}
+} -->
 
-<ng-template>
+<!-- <ng-template>
     <p>This content is inside ng-template.</p>
 </ng-template>
 
@@ -123,4 +123,13 @@
 </div>
 <div [ngTemplateOutlet]="callToAction">
     <h5>Footer</h5>
-</div>
+</div> -->
+<!-- 
+<h3>{{users}}</h3> -->
+
+<!-- <h3>{{users[0]}}</h3>
+<h3>{{users[1]}}</h3>
+<h3>{{users[2]}}</h3>
+<h3>{{users[3]}}</h3> -->
+
+<h3 *ngFor="let user of users">{{user}}</h3>

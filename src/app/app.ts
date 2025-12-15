@@ -4,17 +4,17 @@ import { AppNavbar } from "./navbar/navbar";
 import { Header } from './header/header';
 import { FormsModule } from '@angular/forms';
 // import { NgIf } from "../../node_modules/@angular/common/types/_common_module-chunk";
-import { NgIf, NgTemplateOutlet } from '@angular/common';
+import { NgIf, NgTemplateOutlet, NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, AppNavbar, Header, FormsModule, NgIf, NgTemplateOutlet],
+  imports: [RouterOutlet, AppNavbar, Header, FormsModule, NgIf, NgTemplateOutlet, NgFor],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
 
-  isLoggedIn:boolean=false;
+  /* isLoggedIn:boolean=false;
     userName:string="Some long and boring text";
   isAdmin:boolean=true;
   isMember:boolean=true;
@@ -24,8 +24,10 @@ export class App {
 
   countLoginAttempts(){
     this.loginCount ++;
-    console.log(this.loginCount);
-  }
+    console.log(this.loginCount); */
+
+    users: Array<String>=['John','Sam','Smith','Max'];
+  
 
 
 
