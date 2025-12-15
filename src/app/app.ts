@@ -16,6 +16,9 @@ export class App {
 
   isLoggedIn:boolean=false;
     userName:string="Some long and boring text";
+  isAdmin:boolean=false;
+  isMember:boolean=false;
+  isGuest:boolean=false;
 
 
 
