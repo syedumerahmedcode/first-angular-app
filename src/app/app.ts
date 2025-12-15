@@ -34,6 +34,19 @@ export class App {
       { id:4, name:'Max', email:'max@gmail.com'  }, 
     ];
   
+    addNewUser(){
+      let user={id:5,name:'User 1',email:'user1@gmail.com'};
+      /**
+       * Adds items to the list
+       */
+      this.userObj.push(user);
+    }
+    onDelete(user:object){
+      let index=this.userObj.indexOf(user);
+      console.log(index);
+      this.userObj.splice(index,1);
+
+    }
 
 
 

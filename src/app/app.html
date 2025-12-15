@@ -150,16 +150,21 @@
         <li>{{user}}</li>
     }
 </ul> -->
-<ul>
+<!-- <ul>
     <li *ngFor="let user of userObj">
         {{user.id}} {{user.name}} {{user.email}}
     </li>
 </ul>
-
+-->
 <ul>
     @for (user   of userObj; track user) {
     <li>
        {{user.id}} {{user.name}} {{user.email}}
+       <button (click)="onDelete(user)">Delete</button>
     </li>
     }
-</ul>
+</ul> 
+
+<!--Angular change detection Mechanism-->
+
+<button (click)="addNewUser()">Add new user</button>
