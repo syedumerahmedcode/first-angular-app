@@ -41,8 +41,14 @@ export class App {
        */
       this.userObj.push(user);
     }
-    onDelete(user:object){
+ /*    onDelete(user:object){
       let index=this.userObj.indexOf(user);
+      console.log(index);
+      this.userObj.splice(index,1);
+
+    } */
+      onDelete(index:number){
+      // let index=this.userObj.indexOf(user);
       console.log(index);
       this.userObj.splice(index,1);
 
