@@ -134,7 +134,7 @@
 <!-- 
 <h3 *ngFor="let user of users">{{user}}</h3> -->
 
-<p>Using for syntax approach</p>
+<!-- <p>Using for syntax approach</p>
 @for(user of users; track user){
     <h3>{{user}}</h3>
 
@@ -149,4 +149,9 @@
     @for(user of users; track user){    
         <li>{{user}}</li>
     }
+</ul> -->
+<ul>
+    <li *ngFor="let user of userObj">
+        {{user.id}} {{user.name}} {{user.email}}
+    </li>
 </ul>
