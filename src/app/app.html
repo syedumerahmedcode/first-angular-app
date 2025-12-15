@@ -155,3 +155,11 @@
         {{user.id}} {{user.name}} {{user.email}}
     </li>
 </ul>
+
+<ul>
+    @for (user   of userObj; track user) {
+    <li>
+       {{user.id}} {{user.name}} {{user.email}}
+    </li>
+    }
+</ul>
