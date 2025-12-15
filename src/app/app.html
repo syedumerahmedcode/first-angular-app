@@ -131,5 +131,11 @@
 <h3>{{users[1]}}</h3>
 <h3>{{users[2]}}</h3>
 <h3>{{users[3]}}</h3> -->
+<!-- 
+<h3 *ngFor="let user of users">{{user}}</h3> -->
 
-<h3 *ngFor="let user of users">{{user}}</h3>
+<p>Using for syntax approach</p>
+@for(user of users; track user){
+    <h3>{{user}}</h3>
+
+}
