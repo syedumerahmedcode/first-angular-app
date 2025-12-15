@@ -42,17 +42,23 @@
   <!--  <input type="text" [value]='textValue' (keyup.enter)="onKeyUp()">
 <br>
     <input type="text" [(ngModel)]='textValue' (keyup.enter)="onKeyUp()"> -->
-    <!--old way-->
-    <h2 *ngIf="isLoggedIn">{{userName}}</h2>
-    <h4 *ngIf="!isLoggedIn">User is not logged in</h4>
-    <!--new way-->
-    @if ( isLoggedIn) {
-        <h3 >{{userName}}(loaded using if syntax block)</h3>
-    }
-    @else {
-        <h4 >User logged out (loaded using else syntax block)</h4>
-    }
-    @if (!isLoggedIn) {
-        <h4 >User logged out (loaded using if syntax block)</h4>
-    }
+<!--old way-->
+<h2 *ngIf="isLoggedIn; else message">{{userName}}</h2>
+<h4 *ngIf="!isLoggedIn">User is not logged in</h4>
+<ng-template #message>
+    <h4 >User is not logged in(Loaded using ngTemplate)</h4>
+</ng-template>
+
+
+
+<!--new way-->
+@if ( isLoggedIn) {
+    <h3 >{{userName}}(loaded using if syntax block)</h3>
+}
+@else {
+    <h4 >User logged out (loaded using else syntax block)</h4>
+}
+@if (!isLoggedIn) {
+    <h4 >User logged out (loaded using if syntax block)</h4>
+}
 
