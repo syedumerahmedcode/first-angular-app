@@ -138,4 +138,15 @@
 @for(user of users; track user){
     <h3>{{user}}</h3>
 
+    
 }
+<ul>
+    <li *ngFor="let user of users">
+        {{user}}
+    </li>
+</ul>
+<ul>
+    @for(user of users; track user){    
+        <li>{{user}}</li>
+    }
+</ul>
