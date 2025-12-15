@@ -106,3 +106,21 @@
 @else if (userRole!='Admin') {
     <h4>Welcome Member</h4>
 }
+
+<ng-template>
+    <p>This content is inside ng-template.</p>
+</ng-template>
+
+<ng-template #callToAction>
+    <button>Join now</button>
+</ng-template>
+
+<div [ngTemplateOutlet]="callToAction">
+    <h5>Sidebar</h5>
+</div>
+<div [ngTemplateOutlet]="callToAction">
+    <h5>Hero</h5>
+</div>
+<div [ngTemplateOutlet]="callToAction">
+    <h5>Footer</h5>
+</div>

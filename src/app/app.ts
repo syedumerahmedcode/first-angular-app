@@ -4,11 +4,11 @@ import { AppNavbar } from "./navbar/navbar";
 import { Header } from './header/header';
 import { FormsModule } from '@angular/forms';
 // import { NgIf } from "../../node_modules/@angular/common/types/_common_module-chunk";
-import { NgIf } from '@angular/common';
+import { NgIf, NgTemplateOutlet } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, AppNavbar, Header, FormsModule, NgIf],
+  imports: [RouterOutlet, AppNavbar, Header, FormsModule, NgIf, NgTemplateOutlet],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
