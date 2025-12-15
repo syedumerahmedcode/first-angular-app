@@ -70,10 +70,21 @@
 <h4 *ngIf="isGuest">Welcome guest</h4> -->
 
 <!--ngIf and Else conditions-->
-<h4 *ngIf="isAdmin; else memberMessage">Welcome admin</h4>
+<!-- <h4 *ngIf="isAdmin; else memberMessage">Welcome admin</h4>
 <ng-template #memberMessage>
     <h4 *ngIf="isMember; else guestMessage">Welcome member</h4>
 </ng-template>
 <ng-template #guestMessage>
     <h4 *ngIf="isGuest">Welcome guest</h4>
-</ng-template>
+</ng-template> -->
+<!--@if, @else snytax approach-->
+@if (isAdmin) {
+    <h4>Welcome admin</h4>
+}
+@else if (isMember) {
+    <h4>Welcome Member</h4>
+}@else if (isGuest) {
+    <h4>Welcome Guest</h4>
+}
+<button (click)="countLoginAttempts()" *ngIf="loginCount<3">Log In</button>
+<h4 *ngIf="loginCount>=3">Exceeded 3 login attempts. Please try again later.</h4>

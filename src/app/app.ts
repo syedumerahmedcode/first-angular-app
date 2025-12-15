@@ -16,9 +16,15 @@ export class App {
 
   isLoggedIn:boolean=false;
     userName:string="Some long and boring text";
-  isAdmin:boolean=false;
-  isMember:boolean=false;
+  isAdmin:boolean=true;
+  isMember:boolean=true;
   isGuest:boolean=false;
+  loginCount:number=0;
+
+  countLoginAttempts(){
+    this.loginCount ++;
+    console.log(this.loginCount);
+  }
 
 
 
