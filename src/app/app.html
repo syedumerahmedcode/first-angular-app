@@ -1,6 +1,20 @@
 
-<app-header></app-header>
-<app-navbar></app-navbar>
+<!-- <app-header></app-header>
+<app-navbar></app-navbar> -->
+<h1>{{appPostTitle}} (App)</h1>
+<!--
+ We are going to bind the 'appPostTitle' to the 'app-post-list' component selector.
+ In order to bind a data to an HTML selector, we use [].
+ --ZZZWe do it by doing the following: [postListTitle]="appPostTitle"
+ --ZZZWe also define postListTitle inside PostList Component class.
+ --ZZZWe also put postListTitle inside a @Input decorator to let Angular know that the field can accept input data from its parent component.
+ --ZZZ--ZZZWe import @Input within the PostList class.
+ --ZZZWe display this in post-list.html using String interpolation
+ --ZZZ--ZZZSomething like: <h2>{{postListTitle}}</h2>
+
+
+-->
+<app-post-list [postListTitle]="appPostTitle"></app-post-list>
 
 
 

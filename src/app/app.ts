@@ -5,19 +5,46 @@ import { Header } from './header/header';
 import { FormsModule } from '@angular/forms';
 // import { NgIf } from "../../node_modules/@angular/common/types/_common_module-chunk";
 import { NgIf, NgTemplateOutlet, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault, NgStyle, NgClass } from '@angular/common';
+import { PostList } from "./post-list/post-list";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, AppNavbar, Header, FormsModule, 
-    NgIf, NgTemplateOutlet, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault, 
-    NgStyle, NgClass
-  ],
+  imports: [RouterOutlet, AppNavbar, Header, FormsModule,
+    NgIf, NgTemplateOutlet, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault,
+    NgStyle, NgClass, 
+    PostList],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
 
    isLoggedIn:boolean=false;
+   appPostTitle:string="Post2";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*  userName:string="Some long and boring text";
   isAdmin:boolean=true;
   isMember:boolean=true;
