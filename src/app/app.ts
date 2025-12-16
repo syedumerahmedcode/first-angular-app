@@ -21,7 +21,7 @@ export class App {
   isGuest:boolean=false;
   loginCount:number=0; */
   userRole:string="Admin";
-  usersRole:string='Member';
+  usersRole:string='Editor';
 
  /*  countLoginAttempts(){
     this.loginCount ++;

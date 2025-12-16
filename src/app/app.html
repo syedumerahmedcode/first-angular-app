@@ -186,9 +186,25 @@
 
 <!--<button (click)="addNewUser()">Add new user</button> -->
 
-<div [ngSwitch]="usersRole">
+<!-- <div [ngSwitch]="usersRole">
     <p *ngSwitchCase="'Admin'">Welcome Admin</p>
     <p *ngSwitchCase="'Member'">Welcome Member</p>
     <p *ngSwitchCase="'Editor'">Welcome Editor</p>
     <p *ngSwitchDefault>Please login</p>
-</div>
+</div> -->
+
+@switch (usersRole) {
+    @case ('Admin') {
+        <p>Welcome Admin</p>
+    }
+    @case ('Member') {
+        <p>Welcome Member</p>
+    }
+    @case ('Editor') {
+        <p>Welcome Editor</p>
+    }
+    @default {
+         <p>Please login</p>
+    }
+
+}
