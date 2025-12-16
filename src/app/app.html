@@ -164,9 +164,16 @@
     @if(userObj.length==0){
         
     }
-    @for (user of userObj; track user;let i=$index; let usersCount=$count) {
+    @for (user of userObj; track user;
+        let i=$index; 
+        let usersCount=$count;
+        let first=$first; 
+        let last=$last;
+        let even =$even;
+        let odd= $odd
+    ) {
     <li>
-       {{usersCount}} {{i}} {{user.id}} {{user.name}} {{user.email}}
+       {{even}} {{odd}}  {{usersCount}} {{i}} {{user.id}} {{user.name}} {{user.email}} 
        <button (click)="onDelete(i)">Delete</button>
     </li>
     }
