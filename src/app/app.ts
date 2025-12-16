@@ -38,7 +38,7 @@ export class App implements AfterViewInit{
        */
       // Prevent change detection error
       // this.cdr.detectChanges();
-      this.message = this.childMessage.childMessage;
+      // this.message = this.childMessage.childMessage;
   }
   receiveEvent(message: string){
     console.log(message);
