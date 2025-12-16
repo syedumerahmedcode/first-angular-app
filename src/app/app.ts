@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, ViewChild, AfterViewInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { AppNavbar } from "./navbar/navbar";
 import { Header } from './header/header';
@@ -16,12 +16,20 @@ import { PostList } from "./post-list/post-list";
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App {
+export class App implements AfterViewInit{
 
    isLoggedIn:boolean=false;
    appPostTitle:string="Post2";
    appIsLogin:boolean=false;
+  @ViewChild(PostList) childMessage:any;
 
+  constructor(){
+    console.log(this.childMessage);
+  }
+
+  ngAfterViewInit(): void {
+      console.log(this.childMessage);
+  }
 
 
 
@@ -67,9 +75,9 @@ export class App {
       { id:4, name:'Max', email:'max@gmail.com'  },  */
     ];
 
-    constructor(){
+   /*  constructor(){
       console.log(this.userObj.length);
-    }
+    } */
   
     addNewUser(){
       let user={id:5,name:'User 1',email:'user1@gmail.com'};
