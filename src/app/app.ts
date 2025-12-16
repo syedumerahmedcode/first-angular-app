@@ -20,6 +20,7 @@ export class App {
 
    isLoggedIn:boolean=false;
    appPostTitle:string="Post2";
+   appIsLogin:boolean=false;
 
 
 
