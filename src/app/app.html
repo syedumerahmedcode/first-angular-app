@@ -150,7 +150,7 @@
         <li>{{user}}</li>
     }
 </ul> -->
-<div *ngIf="userObj.length==0">
+<!-- <div *ngIf="userObj.length==0">
     <p>No users to display</p>
 </div>
 <ul>
@@ -158,14 +158,20 @@
        {{usersCount}} - {{i}} {{user.id}} {{user.name}} {{user.email}} 
        <button (click)="onDelete(i)">Delete</button>
     </li>
-</ul>
+</ul> -->
 
 <ul>
+    @if(userObj.length==0){
+        
+    }
     @for (user of userObj; track user;let i=$index; let usersCount=$count) {
     <li>
        {{usersCount}} {{i}} {{user.id}} {{user.name}} {{user.email}}
        <button (click)="onDelete(i)">Delete</button>
     </li>
+    }
+    @empty {
+         <p>No users to display - Loaded using empty Syntax</p>
     }
 </ul> 
 
