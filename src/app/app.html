@@ -220,3 +220,7 @@
 
 <!--Here we are using class binding. Css class is applied if isLoggedIn is true -->
 <h1 [class.login]="isLoggedIn" [class.logout]="!isLoggedIn">Class binding</h1>
+<h1 [ngClass]="{
+    'login':isLoggedIn,
+    'logout':!isLoggedIn
+}">Ng class directive</h1>
