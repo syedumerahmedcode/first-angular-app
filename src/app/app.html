@@ -99,11 +99,11 @@
 <!-- <h4 *ngIf="userRole=='Admin';else message">Welcome Admin</h4>
 <ng-template #message>
     <h4>Welcome Member</h4>
-</ng-template> -->
-<!-- @if (userRole=='Admin') {
+</ng-template> 
+@if (userRole=='Admin') {
     <h4 >Welcome Admin</h4>
 }
-@else if (userRole!='Admin') {
+@else if (userRole=='Member') {
     <h4>Welcome Member</h4>
 } -->
 
@@ -160,7 +160,7 @@
     </li>
 </ul> -->
 
-<ul>
+<!-- <ul>
     @if(userObj.length==0){
         
     }
@@ -184,4 +184,11 @@
 
 <!--Angular change detection Mechanism-->
 
-<button (click)="addNewUser()">Add new user</button>
+<!--<button (click)="addNewUser()">Add new user</button> -->
+
+<div [ngSwitch]="usersRole">
+    <p *ngSwitchCase="'Admin'">Welcome Admin</p>
+    <p *ngSwitchCase="'Member'">Welcome Member</p>
+    <p *ngSwitchCase="'Editor'">Welcome Editor</p>
+    <p *ngSwitchDefault>Please login</p>
+</div>
