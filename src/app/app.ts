@@ -1,4 +1,4 @@
-import { Component, signal, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, signal, ViewChild, AfterViewInit, ChangeDetectorRef  } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { AppNavbar } from "./navbar/navbar";
 import { Header } from './header/header';
@@ -18,17 +18,25 @@ import { PostList } from "./post-list/post-list";
 })
 export class App implements AfterViewInit{
 
-   isLoggedIn:boolean=false;
-   appPostTitle:string="Post2";
-   appIsLogin:boolean=false;
+  isLoggedIn:boolean=false;
+  appPostTitle:string="Post2";
+  appIsLogin:boolean=false;
   @ViewChild(PostList) childMessage:any;
+  message: string = '';
 
-  constructor(){
+  constructor(private cdr: ChangeDetectorRef){
     console.log(this.childMessage);
   }
 
   ngAfterViewInit(): void {
-      console.log(this.childMessage);
+      // console.log(this.childMessage);
+      /**
+       * Workaround to prevent the following error from happenning:
+       * ExpressionChangedAfterItHasBeenCheckedError: Expression has changed after it was checked. Previous value: ''. Current value: 'Hello from child component'."
+       */
+      // Prevent change detection error
+      this.cdr.detectChanges();
+      // this.message = this.childMessage.childMessage;
   }
 
 

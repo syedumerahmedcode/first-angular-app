@@ -10,5 +10,6 @@ export class PostList {
   @Input() postListTitle:string="";
   @Input() postIsLogin:boolean=true;
   childMessage:string='Hello from child component'; 
+  postCount:number=0;
 
 }
