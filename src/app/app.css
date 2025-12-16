@@ -15,3 +15,7 @@
     background-color: red;
     border: 1px solid green;
 }
+.login{
+    color: green;
+    text-transform: uppercase;
+}

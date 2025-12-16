@@ -209,8 +209,10 @@
 
 } -->
 
+<!--We are using property binding with css to change the style-->
 <h1 [style.color]="isLoggedIn ? 'green' : 'red'" [style.textTransform]="isLoggedIn ? 'uppercase' : 'lowercase'">Welcome Admin</h1>
 
+<!--Using ngStyle directive-->
 <h1 [ngStyle]="{ 
     'color':isLoggedIn ? 'green' : 'red',
     'textTransform':isLoggedIn ? 'uppercase' : 'lowercase'}"
