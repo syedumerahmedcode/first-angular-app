@@ -23,8 +23,9 @@ export class App implements AfterViewInit{
   appIsLogin:boolean=false;
   @ViewChild(PostList) childMessage:any;
   message: string = '';
+  messageFromChild:string='';
 
-  constructor(private cdr: ChangeDetectorRef){
+  constructor(){
     console.log(this.childMessage);
   }
 
@@ -35,8 +36,13 @@ export class App implements AfterViewInit{
        * ExpressionChangedAfterItHasBeenCheckedError: Expression has changed after it was checked. Previous value: ''. Current value: 'Hello from child component'."
        */
       // Prevent change detection error
-      this.cdr.detectChanges();
-      // this.message = this.childMessage.childMessage;
+      // this.cdr.detectChanges();
+      this.message = this.childMessage.childMessage;
+  }
+  receiveEvent(message: string){
+    console.log(message);
+    this.messageFromChild=message;
+    
   }
 
 

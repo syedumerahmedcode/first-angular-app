@@ -1,24 +1,26 @@
 
 <!-- <app-header></app-header>
 <app-navbar></app-navbar> -->
-<h1>{{appPostTitle}} (App)</h1>
+<!-- <h1>{{appPostTitle}} (App)</h1>
 <h1>{{appIsLogin}} (App)</h1>
-<p> {{childMessage.childMessage}}, Post count {{childMessage.postCount}} --ZZZ printed from the parent component</p>
+<p> {{childMessage.childMessage}}, Post count {{childMessage.postCount}} --ZZZ printed from the parent component</p> -->
 <!--  <p> {{message}}, --ZZZ printed from the parent component</p> -->
 
 <!--
  We are going to bind the 'appPostTitle' to the 'app-post-list' component selector.
  In order to bind a data to an HTML selector, we use [].
- --ZZZWe do it by doing the following: [postListTitle]="appPostTitle"
- --ZZZWe also define postListTitle inside PostList Component class.
- --ZZZWe also put postListTitle inside a @Input decorator to let Angular know that the field can accept input data from its parent component.
- --ZZZ--ZZZWe import @Input within the PostList class.
- --ZZZWe display this in post-list.html using String interpolation
- --ZZZ--ZZZSomething like: <h2>{{postListTitle}}</h2>
+ --ZZZWe are using event binding approach to listen for the message event output variable: 'messageEvent' that we defined in the child component.
+ --ZZZWhen this event is emitted, it will trigger the receive method in our parent component passing along whatever that data which is emitted:
+ --ZZZ--ZZZ(messageEvent)="receiveEvent($event))
+ --ZZZ
+ --ZZZ
+ --ZZZ--ZZZ
 
 
 -->
-<app-post-list [postListTitle]="appPostTitle" [postIsLogin]="appIsLogin"></app-post-list>
+<app-post-list (messageEvent)="receiveEvent($event)"></app-post-list>
+<h2>{{messageFromChild}}</h2>
+
 
 
 

@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-post-list',
@@ -11,5 +11,13 @@ export class PostList {
   @Input() postIsLogin:boolean=true;
   childMessage:string='Hello from child component'; 
   postCount:number=0;
+  parentMessage:string='Message from the child component using Click event';
+
+  @Output() messageEvent=new EventEmitter();
+
+  sendMessage(){
+    console.log("Button click");
+    this.messageEvent.emit(this.parentMessage);
+  }
 
 }
