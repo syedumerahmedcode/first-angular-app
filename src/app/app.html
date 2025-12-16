@@ -210,3 +210,8 @@
 } -->
 
 <h1 [style.color]="isLoggedIn ? 'green' : 'red'" [style.textTransform]="isLoggedIn ? 'uppercase' : 'lowercase'">Welcome Admin</h1>
+
+<h1 [ngStyle]="{ 
+    'color':isLoggedIn ? 'green' : 'red',
+    'textTransform':isLoggedIn ? 'uppercase' : 'lowercase'}"
+    >Ng Style directive</h1>

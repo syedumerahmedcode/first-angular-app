@@ -4,17 +4,19 @@ import { AppNavbar } from "./navbar/navbar";
 import { Header } from './header/header';
 import { FormsModule } from '@angular/forms';
 // import { NgIf } from "../../node_modules/@angular/common/types/_common_module-chunk";
-import { NgIf, NgTemplateOutlet, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault } from '@angular/common';
+import { NgIf, NgTemplateOutlet, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault, NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, AppNavbar, Header, FormsModule, NgIf, NgTemplateOutlet, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault],
+  imports: [RouterOutlet, AppNavbar, Header, FormsModule, 
+    NgIf, NgTemplateOutlet, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault, 
+    NgStyle],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
 
-   isLoggedIn:boolean=false;
+   isLoggedIn:boolean=true;
 /*  userName:string="Some long and boring text";
   isAdmin:boolean=true;
   isMember:boolean=true;
