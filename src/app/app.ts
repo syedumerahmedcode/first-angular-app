@@ -14,8 +14,8 @@ import { NgIf, NgTemplateOutlet, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault 
 })
 export class App {
 
-/*   isLoggedIn:boolean=false;
-  userName:string="Some long and boring text";
+   isLoggedIn:boolean=false;
+/*  userName:string="Some long and boring text";
   isAdmin:boolean=true;
   isMember:boolean=true;
   isGuest:boolean=false;

@@ -192,7 +192,7 @@
     <p *ngSwitchCase="'Editor'">Welcome Editor</p>
     <p *ngSwitchDefault>Please login</p>
 </div> -->
-
+<!-- 
 @switch (usersRole) {
     @case ('Admin') {
         <p>Welcome Admin</p>
@@ -207,4 +207,6 @@
          <p>Please login</p>
     }
 
-}
+} -->
+
+<h1 [style.color]="isLoggedIn ? 'green' : 'red'" [style.textTransform]="isLoggedIn ? 'uppercase' : 'lowercase'">Welcome Admin</h1>
