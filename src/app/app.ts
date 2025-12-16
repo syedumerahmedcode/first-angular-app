@@ -6,13 +6,14 @@ import { FormsModule } from '@angular/forms';
 // import { NgIf } from "../../node_modules/@angular/common/types/_common_module-chunk";
 import { NgIf, NgTemplateOutlet, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault, NgStyle, NgClass } from '@angular/common';
 import { PostList } from "./post-list/post-list";
+import { Card } from "./card/card";
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, AppNavbar, Header, FormsModule,
     NgIf, NgTemplateOutlet, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault,
-    NgStyle, NgClass, 
-    PostList],
+    NgStyle, NgClass,
+    PostList, Card],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
