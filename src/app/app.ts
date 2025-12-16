@@ -28,10 +28,10 @@ export class App {
 
     users: Array<String>=['John','Sam','Smith','Max'];
     userObj:Array<any>=[
-      { id:1, name:'John', email:'john@gmail.com'  }, 
+/*       { id:1, name:'John', email:'john@gmail.com'  }, 
       { id:2, name:'Smith', email:'smith@gmail.com'  }, 
       { id:3, name:'sam', email:'sam@gmail.com'  }, 
-      { id:4, name:'Max', email:'max@gmail.com'  }, 
+      { id:4, name:'Max', email:'max@gmail.com'  },  */
     ];
 
     constructor(){

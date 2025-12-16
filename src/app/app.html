@@ -150,6 +150,9 @@
         <li>{{user}}</li>
     }
 </ul> -->
+<div *ngIf="userObj.length==0">
+    <p>No users to display</p>
+</div>
 <ul>
     <li *ngFor="let user of userObj; let i = index; let usersCount=count">
        {{usersCount}} - {{i}} {{user.id}} {{user.name}} {{user.email}} 
