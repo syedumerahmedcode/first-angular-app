@@ -19,3 +19,7 @@
     color: green;
     text-transform: uppercase;
 }
+.logout{
+    color: red;
+    text-transform: lowercase;
+}

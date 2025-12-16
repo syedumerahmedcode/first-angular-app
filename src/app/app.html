@@ -210,10 +210,13 @@
 } -->
 
 <!--We are using property binding with css to change the style-->
-<h1 [style.color]="isLoggedIn ? 'green' : 'red'" [style.textTransform]="isLoggedIn ? 'uppercase' : 'lowercase'">Welcome Admin</h1>
-
+<!-- <h1 [style.color]="isLoggedIn ? 'green' : 'red'" [style.textTransform]="isLoggedIn ? 'uppercase' : 'lowercase'">Welcome Admin</h1>
+ -->
 <!--Using ngStyle directive-->
-<h1 [ngStyle]="{ 
+<!-- <h1 [ngStyle]="{ 
     'color':isLoggedIn ? 'green' : 'red',
     'textTransform':isLoggedIn ? 'uppercase' : 'lowercase'}"
-    >Ng Style directive</h1>
+    >Ng Style directive</h1> -->
+
+<!--Here we are using class binding. Css class is applied if isLoggedIn is true -->
+<h1 [class.login]="isLoggedIn" [class.logout]="!isLoggedIn">Class binding</h1>
