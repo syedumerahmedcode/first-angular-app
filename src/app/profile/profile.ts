@@ -8,6 +8,7 @@ import { Component, OnChanges, SimpleChanges, Input, OnInit, DoCheck } from '@an
 })
 export class Profile implements OnChanges, OnInit, DoCheck{
   @Input() pUsername:string ='';
+  counter:number=0;
 
   constructor(){
     console.log('Contructor method from Profile component triggered');
@@ -31,5 +32,9 @@ export class Profile implements OnChanges, OnInit, DoCheck{
   ngDoCheck(){
     console.log('ngDoCheck triggers');
     
+  }
+
+  incrementCounter(){
+    this.counter++;
   }
 }
