@@ -6,7 +6,8 @@ import { FormsModule } from '@angular/forms';
 // import { NgIf } from "../../node_modules/@angular/common/types/_common_module-chunk";
 import { NgIf, NgTemplateOutlet, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault, NgStyle, NgClass, NgComponentOutlet, 
   UpperCasePipe, LowerCasePipe, 
-  TitleCasePipe} from '@angular/common';
+  TitleCasePipe,
+  DecimalPipe} from '@angular/common';
 import { PostList } from "./post-list/post-list";
 import { Card } from "./card/card";
 import { Profile } from "./profile/profile";
@@ -21,7 +22,8 @@ import { Profile } from "./profile/profile";
     Profile,
 UpperCasePipe,
 LowerCasePipe,
-TitleCasePipe],
+TitleCasePipe,
+DecimalPipe],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
