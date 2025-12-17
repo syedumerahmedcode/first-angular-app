@@ -64,7 +64,8 @@ userName:string='JohnDoe';
   } */
 
   loadComponent(){
-    this.viewContainer.createComponent(PostList)
+    // this.viewContainer.createComponent(PostList);
+    this.viewContainer.createComponent(Profile);
   }
 
   removeComponent(){
