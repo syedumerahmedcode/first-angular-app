@@ -1,4 +1,4 @@
-import { Component, OnChanges, SimpleChanges, Input } from '@angular/core';
+import { Component, OnChanges, SimpleChanges, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-profile',
@@ -6,10 +6,14 @@ import { Component, OnChanges, SimpleChanges, Input } from '@angular/core';
   templateUrl: './profile.html',
   styleUrl: './profile.css',
 })
-export class Profile implements OnChanges{
+export class Profile implements OnChanges, OnInit{
   @Input() pUsername:string ='';
   ngOnChanges() {
-      console.log('OnChanges Triggerred');
-      
+      console.log('OnChanges Triggerred');      
+  }
+
+  ngOnInit(){
+    console.log('ngOnInit hook triggered');
+    
   }
 }
