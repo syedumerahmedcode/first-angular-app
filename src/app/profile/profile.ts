@@ -1,4 +1,4 @@
-import { Component, OnChanges, SimpleChanges, Input, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit } from '@angular/core';
+import { Component, OnChanges, SimpleChanges, Input, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked } from '@angular/core';
 
 @Component({
   selector: 'app-profile',
@@ -6,7 +6,8 @@ import { Component, OnChanges, SimpleChanges, Input, OnInit, DoCheck, AfterConte
   templateUrl: './profile.html',
   styleUrl: './profile.css',
 })
-export class Profile implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit{
+export class Profile implements OnChanges, OnInit, DoCheck, 
+AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked{
   @Input() pUsername:string ='';
   counter:number=0;
 
@@ -16,6 +17,10 @@ export class Profile implements OnChanges, OnInit, DoCheck, AfterContentInit, Af
     console.log('--------'); */
     
     
+    
+  }
+  ngAfterViewChecked(): void {
+    console.log('ngAfterViewChecked triggered');
     
   }
   ngOnChanges() {
