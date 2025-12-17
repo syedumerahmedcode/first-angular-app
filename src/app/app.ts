@@ -1,4 +1,4 @@
-import { Component, signal, ViewChild, AfterViewInit, ChangeDetectorRef  } from '@angular/core';
+import { Component, signal, ViewChild, AfterViewInit, ChangeDetectorRef, ViewContainerRef  } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { AppNavbar } from "./navbar/navbar";
 import { Header } from './header/header';
@@ -26,8 +26,8 @@ export class App implements AfterViewInit{
   message: string = '';
   messageFromChild:string='';
 
-  constructor(){
-    console.log(this.childMessage);
+  constructor(private viewContainer: ViewContainerRef){
+    // console.log(this.childMessage);
   }
 
   ngAfterViewInit(): void {
@@ -46,8 +46,16 @@ export class App implements AfterViewInit{
     
   }
 
-  loadComponent(){
+  /* loadComponent(){
     return PostList;
+  } */
+
+  loadComponent(){
+    this.viewContainer.createComponent(PostList)
+  }
+
+  removeComponent(){
+    this.viewContainer.remove();
   }
 
 
