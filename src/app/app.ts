@@ -7,7 +7,9 @@ import { FormsModule } from '@angular/forms';
 import { NgIf, NgTemplateOutlet, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault, NgStyle, NgClass, NgComponentOutlet, 
   UpperCasePipe, LowerCasePipe, 
   TitleCasePipe,
-  DecimalPipe} from '@angular/common';
+  DecimalPipe,
+  PercentPipe,
+  CurrencyPipe} from '@angular/common';
 import { PostList } from "./post-list/post-list";
 import { Card } from "./card/card";
 import { Profile } from "./profile/profile";
@@ -23,7 +25,9 @@ import { Profile } from "./profile/profile";
 UpperCasePipe,
 LowerCasePipe,
 TitleCasePipe,
-DecimalPipe],
+DecimalPipe,
+PercentPipe,
+CurrencyPipe],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
