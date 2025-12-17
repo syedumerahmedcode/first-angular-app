@@ -1,4 +1,4 @@
-import { Component, signal, ViewChild, AfterViewInit, ChangeDetectorRef, ViewContainerRef  } from '@angular/core';
+import { Component, signal, ViewChild, AfterViewInit, ChangeDetectorRef, ViewContainerRef, OnChanges } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { AppNavbar } from "./navbar/navbar";
 import { Header } from './header/header';
@@ -69,6 +69,10 @@ userName:string='JohnDoe';
 
   removeComponent(){
     this.viewContainer.remove();
+  }
+
+  changeUser(){
+    this.userName='John Smith';
   }
 
 
