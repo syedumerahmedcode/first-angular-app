@@ -7,30 +7,43 @@ import { FormsModule } from '@angular/forms';
 import { NgIf, NgTemplateOutlet, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault, NgStyle, NgClass, NgComponentOutlet } from '@angular/common';
 import { PostList } from "./post-list/post-list";
 import { Card } from "./card/card";
+import { Profile } from "./profile/profile";
 
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, AppNavbar, Header, FormsModule,
     NgIf, NgTemplateOutlet, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault,
     NgStyle, NgClass,
-    PostList, Card, NgComponentOutlet],
+    PostList, Card, 
+    NgComponentOutlet, 
+    Profile],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App implements AfterViewInit{
+export class App /*implements AfterViewInit*/{
 
-  isLoggedIn:boolean=false;
+userName:string='JohnDoe';
+
+
+
+
+
+
+
+
+ /*  isLoggedIn:boolean=false;
   appPostTitle:string="Post2";
   appIsLogin:boolean=false;
   @ViewChild(PostList) childMessage:any;
   message: string = '';
   messageFromChild:string='';
+  */
 
   constructor(private viewContainer: ViewContainerRef){
     // console.log(this.childMessage);
-  }
+  } 
 
-  ngAfterViewInit(): void {
+  // ngAfterViewInit(): void {
       // console.log(this.childMessage);
       /**
        * Workaround to prevent the following error from happenning:
@@ -39,12 +52,12 @@ export class App implements AfterViewInit{
       // Prevent change detection error
       // this.cdr.detectChanges();
       // this.message = this.childMessage.childMessage;
-  }
-  receiveEvent(message: string){
+  // }
+/*   receiveEvent(message: string){
     console.log(message);
     this.messageFromChild=message;
     
-  }
+  } */
 
   /* loadComponent(){
     return PostList;
