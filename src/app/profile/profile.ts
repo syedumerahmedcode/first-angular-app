@@ -8,12 +8,23 @@ import { Component, OnChanges, SimpleChanges, Input, OnInit } from '@angular/cor
 })
 export class Profile implements OnChanges, OnInit{
   @Input() pUsername:string ='';
+
+  constructor(){
+    console.log('Contructor method from Profile component triggered');
+    console.log(this.pUsername);
+    console.log('--------');
+    
+    
+    
+  }
   ngOnChanges() {
       console.log('OnChanges Triggerred');      
   }
 
   ngOnInit(){
     console.log('ngOnInit hook triggered');
+    console.log(this.pUsername);
+    console.log('--------');
     
   }
 }
