@@ -1,4 +1,4 @@
-import { Component, OnChanges, SimpleChanges, Input, OnInit } from '@angular/core';
+import { Component, OnChanges, SimpleChanges, Input, OnInit, DoCheck } from '@angular/core';
 
 @Component({
   selector: 'app-profile',
@@ -6,7 +6,7 @@ import { Component, OnChanges, SimpleChanges, Input, OnInit } from '@angular/cor
   templateUrl: './profile.html',
   styleUrl: './profile.css',
 })
-export class Profile implements OnChanges, OnInit{
+export class Profile implements OnChanges, OnInit, DoCheck{
   @Input() pUsername:string ='';
 
   constructor(){
@@ -25,6 +25,11 @@ export class Profile implements OnChanges, OnInit{
     console.log('ngOnInit hook triggered');
     console.log(this.pUsername);
     console.log('--------');
+    
+  }
+
+  ngDoCheck(){
+    console.log('ngDoCheck triggers');
     
   }
 }
