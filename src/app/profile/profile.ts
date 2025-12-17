@@ -1,4 +1,4 @@
-import { Component, OnChanges, SimpleChanges, Input, OnInit, DoCheck } from '@angular/core';
+import { Component, OnChanges, SimpleChanges, Input, OnInit, DoCheck, AfterContentInit, AfterContentChecked } from '@angular/core';
 
 @Component({
   selector: 'app-profile',
@@ -6,35 +6,45 @@ import { Component, OnChanges, SimpleChanges, Input, OnInit, DoCheck } from '@an
   templateUrl: './profile.html',
   styleUrl: './profile.css',
 })
-export class Profile implements OnChanges, OnInit, DoCheck{
+export class Profile implements OnChanges, OnInit, DoCheck, AfterContentInit, AfterContentChecked{
   @Input() pUsername:string ='';
   counter:number=0;
 
   constructor(){
-    console.log('Contructor method from Profile component triggered');
+   /*  console.log('Contructor method from Profile component triggered');
     console.log(this.pUsername);
-    console.log('--------');
+    console.log('--------'); */
     
     
     
   }
   ngOnChanges() {
-      console.log('OnChanges Triggerred');      
+      // console.log('OnChanges Triggerred');      
   }
 
   ngOnInit(){
-    console.log('ngOnInit hook triggered');
+  /*   console.log('ngOnInit hook triggered');
     console.log(this.pUsername);
-    console.log('--------');
+    console.log('--------'); */
     
   }
 
   ngDoCheck(){
-    console.log('ngDoCheck triggers');
+    // console.log('ngDoCheck triggers');
     
   }
 
   incrementCounter(){
     this.counter++;
   }
+
+  ngAfterContentInit(){
+    console.log('AfterContentInit triggered');    
+  }
+
+  ngAfterContentChecked(){
+    console.log('AfterContentChecked triggered.');
+    
+  }
+
 }

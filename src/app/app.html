@@ -36,8 +36,12 @@
 <!-- <button (click)="loadComponent()">Create Component</button>
 
 <button (click)="removeComponent()">Remove component</button> -->
-<app-profile [pUsername]="userName"></app-profile>
-<button (click)="changeUser()">Change User name</button>
+<!-- <app-profile [pUsername]="userName"></app-profile>-->
+<button (click)="changeUser()">Change User name</button> 
+<app-profile>
+    <h1>{{userName}}</h1>
+    <p>content projected from parent</p>
+</app-profile>
 
 
 
