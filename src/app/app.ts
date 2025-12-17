@@ -39,6 +39,17 @@ export class App /*implements AfterViewInit*/{
 title:string="angular app";
 today:Date=new Date();
 
+user:any={
+  name:'John Doe',
+  age:30,
+  email:'john@doe.com'
+};
+
+
+convertJson(){
+  this.user=JSON.stringify(this.user);
+}
+
 uppercase(){
   this.title=this.title.toUpperCase();
 }
