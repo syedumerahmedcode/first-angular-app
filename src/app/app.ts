@@ -22,9 +22,12 @@ import { Profile } from "./profile/profile";
 })
 export class App /*implements AfterViewInit*/{
 
-userName:string='JohnDoe';
+// userName:string='JohnDoe';
+title:string="angular app";
 
-
+uppercase(){
+  this.title=this.title.toUpperCase();
+}
 
 
 
@@ -39,9 +42,9 @@ userName:string='JohnDoe';
   messageFromChild:string='';
   */
 
-  constructor(private viewContainer: ViewContainerRef){
+ /*  constructor(private viewContainer: ViewContainerRef){
     // console.log(this.childMessage);
-  } 
+  }  */
 
   // ngAfterViewInit(): void {
       // console.log(this.childMessage);
@@ -63,7 +66,7 @@ userName:string='JohnDoe';
     return PostList;
   } */
 
-  loadComponent(){
+ /*  loadComponent(){
     // this.viewContainer.createComponent(PostList);
     this.viewContainer.createComponent(Profile);
   }
@@ -74,7 +77,7 @@ userName:string='JohnDoe';
 
   changeUser(){
     this.userName='John Smith';
-  }
+  } */
 
 
 
