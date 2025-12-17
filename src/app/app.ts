@@ -4,7 +4,7 @@ import { AppNavbar } from "./navbar/navbar";
 import { Header } from './header/header';
 import { FormsModule } from '@angular/forms';
 // import { NgIf } from "../../node_modules/@angular/common/types/_common_module-chunk";
-import { NgIf, NgTemplateOutlet, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault, NgStyle, NgClass, NgComponentOutlet } from '@angular/common';
+import { NgIf, NgTemplateOutlet, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault, NgStyle, NgClass, NgComponentOutlet, UpperCasePipe } from '@angular/common';
 import { PostList } from "./post-list/post-list";
 import { Card } from "./card/card";
 import { Profile } from "./profile/profile";
@@ -16,7 +16,8 @@ import { Profile } from "./profile/profile";
     NgStyle, NgClass,
     PostList, Card, 
     NgComponentOutlet, 
-    Profile],
+    Profile,
+    UpperCasePipe],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
