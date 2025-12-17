@@ -9,7 +9,8 @@ import { NgIf, NgTemplateOutlet, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault,
   TitleCasePipe,
   DecimalPipe,
   PercentPipe,
-  CurrencyPipe} from '@angular/common';
+  CurrencyPipe,
+  DatePipe} from '@angular/common';
 import { PostList } from "./post-list/post-list";
 import { Card } from "./card/card";
 import { Profile } from "./profile/profile";
@@ -27,7 +28,8 @@ LowerCasePipe,
 TitleCasePipe,
 DecimalPipe,
 PercentPipe,
-CurrencyPipe],
+CurrencyPipe,
+DatePipe],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -35,10 +37,13 @@ export class App /*implements AfterViewInit*/{
 
 // userName:string='JohnDoe';
 title:string="angular app";
+today:Date=new Date();
 
 uppercase(){
   this.title=this.title.toUpperCase();
 }
+
+
 
 
 

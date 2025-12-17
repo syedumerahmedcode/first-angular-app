@@ -55,15 +55,19 @@
 
 <!--number pipes-->
 
-<h1>{{1234567.89 | number}}</h1>
+<!-- <h1>{{1234567.89 | number}}</h1> -->
 
 <!--percentage pipe-->
-<h1>{{ 0.7 | percent}}</h1>
+<!-- <h1>{{ 0.7 | percent}}</h1># -->
 
 <!--currency pipe-->
-<h1>{{1000 | currency: 'EUR'}}</h1>
+<!-- <h1>{{1000 | currency: 'EUR'}}</h1> -->
 
-
+<!--date and time pipe-->
+<h1>{{ today | date : 'short'}} - short</h1>
+<h1>{{ today | date : 'medium'}} - Medium</h1>
+<h1>{{ today | date : 'long'}} - Long</h1>
+<h1>{{ today | date : 'full'}} - full</h1>
 
 
 
