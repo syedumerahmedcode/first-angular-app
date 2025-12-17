@@ -11,7 +11,8 @@ import { NgIf, NgTemplateOutlet, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault,
   PercentPipe,
   CurrencyPipe,
   DatePipe,
-  JsonPipe} from '@angular/common';
+  JsonPipe,
+  SlicePipe} from '@angular/common';
 import { PostList } from "./post-list/post-list";
 import { Card } from "./card/card";
 import { Profile } from "./profile/profile";
@@ -31,7 +32,8 @@ DecimalPipe,
 PercentPipe,
 CurrencyPipe,
 DatePipe,
-JsonPipe],
+JsonPipe,
+SlicePipe],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
