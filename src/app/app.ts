@@ -10,7 +10,8 @@ import { NgIf, NgTemplateOutlet, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault,
   DecimalPipe,
   PercentPipe,
   CurrencyPipe,
-  DatePipe} from '@angular/common';
+  DatePipe,
+  JsonPipe} from '@angular/common';
 import { PostList } from "./post-list/post-list";
 import { Card } from "./card/card";
 import { Profile } from "./profile/profile";
@@ -29,7 +30,8 @@ TitleCasePipe,
 DecimalPipe,
 PercentPipe,
 CurrencyPipe,
-DatePipe],
+DatePipe,
+JsonPipe],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
