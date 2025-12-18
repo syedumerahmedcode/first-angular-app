@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
+import { Post } from '../interfaces/post';
 
-export interface Post{
+/* export interface Post{
   id:number,
   title:string,
   post:string
-}
+} */
 
 
 @Injectable({
@@ -26,7 +27,7 @@ export class PostService {
     return this.posts;
   }
 
-  addPost(newPost:any){
+  addPost(newPost:Post){
     console.log(newPost);
     this.posts.push(newPost);
     

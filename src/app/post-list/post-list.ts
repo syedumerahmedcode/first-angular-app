@@ -5,6 +5,7 @@ import { Profile } from "../profile/profile";
 import { User } from "../user/user";
 import { UserService } from '../services/user.service';
 import { PostService } from '../services/post';
+import { Post } from '../interfaces/post';
 
 @Component({
   selector: 'app-post-list',
@@ -28,7 +29,7 @@ constructor(private userServiceDI:UserService, private postServiceDI:PostService
 }
 
 addPost(){
-  let postData={
+  let postData:Post={
     id:7,
     title:'Post title 7',
     post:'Dummy post 7'
