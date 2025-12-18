@@ -18,4 +18,10 @@ export class Post {
   getPost(){
     return this.posts;
   }
+
+  addPost(newPost:any){
+    console.log(newPost);
+    this.posts.push(newPost);
+    
+  }
 }

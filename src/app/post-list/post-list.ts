@@ -27,6 +27,15 @@ constructor(private userServiceDI:UserService, private postServiceDI:Post){
   // this.userService=new UserService();
 }
 
+addPost(){
+  let postData={
+    id:7,
+    title:'Post title 7',
+    post:'Dummy post 7'
+  }
+  this.postServiceDI.addPost(postData);
+}
+
 
 
 
