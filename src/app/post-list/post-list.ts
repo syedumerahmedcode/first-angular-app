@@ -3,6 +3,7 @@ import { Card } from "../card/card";
 import { JsonPipe } from '@angular/common';
 import { Profile } from "../profile/profile";
 import { User } from "../user/user";
+import { UserService } from '../services/user.service';
 
 @Component({
   selector: 'app-post-list',
@@ -14,7 +15,11 @@ import { User } from "../user/user";
 export class PostList {
 
 @Input() childUser:any;
+userService:any;
 
+constructor(){
+  this.userService=new UserService();
+}
 
 
 
