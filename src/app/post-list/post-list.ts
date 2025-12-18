@@ -17,7 +17,8 @@ export class PostList {
 @Input() childUser:any;
 userService:any;
 
-constructor(){
+constructor(private userServiceDI:UserService){
+  this.userService=userServiceDI;
   // this.userService=new UserService();
 }
 
