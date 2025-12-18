@@ -53,6 +53,7 @@ formSubmit(event:any){
   console.log(event.target.address.value); */
   console.log('Form submitted');
   console.log(event);
+  console.log(event.value)
   
   
   
