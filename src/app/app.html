@@ -331,11 +331,17 @@
     <h2>User form</h2>
 
     <form (submit)="formSubmit(f)" #f="ngForm" ngForm>
-        <input type="text" placeholder="name" name="name" ngModel>
+        <input type="text" placeholder="name" name="fullName" ngModel #fullName="ngModel" 
+        (change)="getValue(fullName)" required>
+        <div class="alert">
+            @if(fullName.invalid){
+                <p>Full name is required</p>
+            }
+        </div>
         <br><br>
-        <input type="Email" placeholder="email" name="email" ngModel>
+        <input type="Email" placeholder="email" name="email" ngModel #email="ngModel">
         <br><br>
-        <input type="text" placeholder="address" name="address" ngModel>
+        <input type="text" placeholder="address" name="address" ngModel #address="ngModel">
 
         <button>Submit</button>
     </form>

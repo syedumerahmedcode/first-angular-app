@@ -51,11 +51,14 @@ formSubmit(event:any){
   /*  console.log(event.target.name.value);
   console.log(event.target.email.value);
   console.log(event.target.address.value); */
-  console.log('Form submitted');
+  /* console.log('Form submitted');
   console.log(event);
-  console.log(event.value)
+  console.log(event.value) */
   
-  
+}
+
+getValue(fullName: any){
+  console.log(fullName);
   
 }
 
