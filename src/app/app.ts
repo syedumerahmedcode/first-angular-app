@@ -16,6 +16,7 @@ import { NgIf, NgTemplateOutlet, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault,
 import { PostList } from "./post-list/post-list";
 import { Card } from "./card/card";
 import { Profile } from "./profile/profile";
+import { UserService } from './services/user.service';
 
 @Component({
   selector: 'app-root',
@@ -38,9 +39,16 @@ SlicePipe],
   styleUrl: './app.css'
 })
 export class App /*implements AfterViewInit*/{
+userService:any;
+constructor(){
+  this.userService=new UserService();
+  console.log(this.userService);
+  
+}
+
 
 // userName:string='JohnDoe';
-title:string="angular app";
+/* title:string="angular app";
 today:Date=new Date();
 
 user:any={
@@ -57,7 +65,7 @@ convertJson(){
 uppercase(){
   this.title=this.title.toUpperCase();
 }
-
+ */
 
 
 
@@ -138,15 +146,15 @@ uppercase(){
   isMember:boolean=true;
   isGuest:boolean=false;
   loginCount:number=0; */
-  userRole:string="Admin";
-  usersRole:string='Editor';
+/*   userRole:string="Admin";
+  usersRole:string='Editor';  */
 
  /*  countLoginAttempts(){
     this.loginCount ++;
     console.log(this.loginCount);
   } */
 
-    users: Array<String>=['John','Sam','Smith','Max'];
+  /*   users: Array<String>=['John','Sam','Smith','Max']; */
     userObj:Array<any>=[
 /*       { id:1, name:'John', email:'john@gmail.com'  }, 
       { id:2, name:'Smith', email:'smith@gmail.com'  }, 

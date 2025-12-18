@@ -81,11 +81,11 @@
 
 <h2>{{user | json}}</h2> -->
 
-<!-- slice pipe -->
-<h1>{{'Hello Angular world' | slice: 6: 13}}</h1>
+<!-- slice pipe --><!-- 
+<h1>{{'Hello Angular world' | slice: 6: 13}}</h1> -->
 
 <!-- Chaining pipes -->
-<h1>{{'Hello Angular world' | slice: 6: 13 | uppercase}}</h1>
+<!-- <h1>{{'Hello Angular world' | slice: 6: 13 | uppercase}}</h1> -->
 
 
 
@@ -323,3 +323,6 @@
     'login':isLoggedIn,
     'logout':!isLoggedIn
 }">Ng class directive</h1> -->
+
+<app-post-list ></app-post-list>
+<h1>{{userService.users | json}}</h1>
