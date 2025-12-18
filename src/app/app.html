@@ -339,7 +339,8 @@
         (change)="getValue(fullName)"
         [class.ng-invalid]="fullName.invalid && fullName.touched" 
         required
-        minlength="3">
+        minlength="3"
+        maxlength="10">
 
         <div class="alert">
             @if(fullName.invalid && fullName.touched){
@@ -348,15 +349,39 @@
                 }
                 @else if(fullName.hasError('minlength')){
                     <p>Full name must be at least 3 characters long</p>
+                }@else if(fullName.hasError('maxlength')){
+                    <p>Full name cannot be over 10 characters long</p>
                 }
                 <!-- <p>Full name is required</p> -->
             }
         </div>
         <br><br>
-        <input type="Email" placeholder="email" name="email" ngModel #email="ngModel">
+        <input type="Email" placeholder="email" name="email" ngModel #email="ngModel"
+        required
+        [class.ng-invalid]="email.invalid && email.touched" >
+            <div class="alert">
+            @if(email.invalid && email.touched){
+                @if(email.hasError('required')){
+                    <p>email is required</p>
+                }
+                
+                <!-- <p>Full name is required</p> -->
+            }
+        </div>
         <br><br>
-        <input type="text" placeholder="address" name="address" ngModel #address="ngModel">
-
+        <textarea placeholder="Address" name="address" ngModel #address="ngModel"
+        required
+        [class.ng-invalid]="address.invalid && address.touched"
+        ></textarea>
+        <div class="alert">
+            @if(address.invalid && address.touched){
+                @if(address.hasError('required')){
+                    <p>address is required</p>
+                }
+                
+                <!-- <p>Full name is required</p> -->
+            }
+        </div>
         <button>Submit</button>
     </form>
 </div>
