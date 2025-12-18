@@ -18,7 +18,7 @@ export class PostList {
 userService:any;
 
 constructor(){
-  this.userService=new UserService();
+  // this.userService=new UserService();
 }
 
 

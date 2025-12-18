@@ -40,9 +40,10 @@ SlicePipe],
 })
 export class App /*implements AfterViewInit*/{
 userService:any;
-constructor(){
-  this.userService=new UserService();
-  console.log(this.userService);
+constructor(private userServiceDI:UserService ){
+  this.userService=userServiceDI;
+  /* this.userService=new UserService();
+  console.log(this.userService); */
   
 }
 
