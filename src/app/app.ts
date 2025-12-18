@@ -48,10 +48,12 @@ constructor(private userServiceDI:UserService ){
 
 formSubmit(event:any){
   // event.preventDefault();
-  console.log('Form submitted');
- /*  console.log(event.target.name.value);
+  /*  console.log(event.target.name.value);
   console.log(event.target.email.value);
   console.log(event.target.address.value); */
+  console.log('Form submitted');
+  console.log(event);
+  
   
   
 }
