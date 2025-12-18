@@ -334,7 +334,7 @@
         <input type="text" placeholder="name" name="fullName" ngModel #fullName="ngModel" 
         (change)="getValue(fullName)" required>
         <div class="alert">
-            @if(fullName.invalid){
+            @if(fullName.invalid && fullName.touched){
                 <p>Full name is required</p>
             }
         </div>
