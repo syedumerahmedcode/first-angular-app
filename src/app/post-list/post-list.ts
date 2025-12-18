@@ -4,6 +4,7 @@ import { JsonPipe } from '@angular/common';
 import { Profile } from "../profile/profile";
 import { User } from "../user/user";
 import { UserService } from '../services/user.service';
+import { Post } from '../services/post';
 
 @Component({
   selector: 'app-post-list',
@@ -16,9 +17,13 @@ export class PostList {
 
 @Input() childUser:any;
 userService:any;
+postService:any;
+posts: Array<any>;
 
-constructor(private userServiceDI:UserService){
+constructor(private userServiceDI:UserService, private postServiceDI:Post){
   this.userService=userServiceDI;
+  this.postService=postServiceDI;
+  this.posts=postServiceDI.posts;
   // this.userService=new UserService();
 }
 
