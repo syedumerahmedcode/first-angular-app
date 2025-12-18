@@ -23,7 +23,7 @@ posts: Array<any>;
 constructor(private userServiceDI:UserService, private postServiceDI:Post){
   this.userService=userServiceDI;
   this.postService=postServiceDI;
-  this.posts=postServiceDI.posts;
+  this.posts=postServiceDI.getPost();
   // this.userService=new UserService();
 }
 

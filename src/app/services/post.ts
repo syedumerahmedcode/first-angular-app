@@ -15,5 +15,7 @@ export class Post {
   constructor(){
   }
 
-  
+  getPost(){
+    return this.posts;
+  }
 }
