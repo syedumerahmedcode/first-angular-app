@@ -43,7 +43,16 @@ userService:any;
 constructor(private userServiceDI:UserService ){
   this.userService=userServiceDI;
   /* this.userService=new UserService();
-  console.log(this.userService); */
+  console.log(this.userService); */  
+}
+
+formSubmit(event:any){
+  event.preventDefault();
+  console.log('Form submitted');
+  console.log(event.target.name.value);
+  console.log(event.target.email.value);
+  console.log(event.target.address.value);
+  
   
 }
 
