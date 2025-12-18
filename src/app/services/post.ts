@@ -1,10 +1,17 @@
 import { Injectable } from '@angular/core';
 
+export interface Post{
+  id:number,
+  title:string,
+  post:string
+}
+
+
 @Injectable({
   providedIn: 'root',
 })
-export class Post {
-  posts:Array<any>=[
+export class PostService {
+  posts:Array<Post>=[
     {id:1, title: 'post title 1', post:'Dummy post 1'},
     {id:2, title: 'post title 2', post:'Dummy post 2'},
     {id:3, title: 'post title 3', post:'Dummy post 3'},
