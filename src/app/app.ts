@@ -47,6 +47,8 @@ constructor(private userServiceDI:UserService ){
 }
 
 formSubmit(event:any){
+  console.log(event.value);
+  
   // event.preventDefault();
   /*  console.log(event.target.name.value);
   console.log(event.target.email.value);
