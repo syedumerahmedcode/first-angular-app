@@ -330,7 +330,7 @@
 <div class="form-center">
     <h2>User form</h2>
 
-    <form (ngSubmit)="formSubmit(f)" #f="ngForm" ngForm>
+    <!-- <form (ngSubmit)="formSubmit(f)" #f="ngForm" ngForm>
         <input type="text" 
         placeholder="name" 
         name="fullName" 
@@ -352,7 +352,7 @@
                 }@else if(fullName.hasError('maxlength')){
                     <p>Full name cannot be over 10 characters long</p>
                 }
-                <!-- <p>Full name is required</p> -->
+               
             }
         </div>
         <br><br>
@@ -365,7 +365,7 @@
                     <p>email is required</p>
                 }
                 
-                <!-- <p>Full name is required</p> -->
+              
             }
         </div>
         <br><br>
@@ -379,9 +379,19 @@
                     <p>address is required</p>
                 }
                 
-                <!-- <p>Full name is required</p> -->
+               
             }
         </div>
         <button [disabled]="f.invalid">Submit</button>
+    </form> -->
+
+    <form>
+        <input type="text" placeholder="Name">
+        <br><br>
+        <input type="text" placeholder="email">
+        <br><br>
+        <textarea></textarea>
+        <br><br>
+        <button>Submit</button>
     </form>
 </div>

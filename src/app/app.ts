@@ -2,7 +2,7 @@ import { Component, signal, ViewChild, AfterViewInit, ChangeDetectorRef, ViewCon
 import { RouterOutlet } from '@angular/router';
 import { AppNavbar } from "./navbar/navbar";
 import { Header } from './header/header';
-import { FormsModule } from '@angular/forms';
+import { FormControl, FormsModule } from '@angular/forms';
 // import { NgIf } from "../../node_modules/@angular/common/types/_common_module-chunk";
 import { NgIf, NgTemplateOutlet, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault, NgStyle, NgClass, NgComponentOutlet, 
   UpperCasePipe, LowerCasePipe, 
@@ -39,15 +39,26 @@ SlicePipe],
   styleUrl: './app.css'
 })
 export class App /*implements AfterViewInit*/{
-userService:any;
+
+ fName=new FormControl();
+
+ constructor(){
+  console.log(this.fName);
+  
+ }
+
+
+
+/*userService:any;
 constructor(private userServiceDI:UserService ){
   this.userService=userServiceDI;
-  /* this.userService=new UserService();
-  console.log(this.userService); */  
-}
+   this.userService=new UserService();
+  console.log(this.userService); 
+}*/
 
-formSubmit(event:any){
-  console.log(event.value);
+
+/*formSubmit(event: any){
+  console.log(event.value); */
   
   // event.preventDefault();
   /*  console.log(event.target.name.value);
@@ -57,12 +68,12 @@ formSubmit(event:any){
   console.log(event);
   console.log(event.value) */
   
-}
+//}
 
-getValue(fullName: any){
+/* getValue(fullName: any){
   console.log(fullName);
   
-}
+} */
 
 
 // userName:string='JohnDoe';
@@ -173,36 +184,36 @@ uppercase(){
   } */
 
   /*   users: Array<String>=['John','Sam','Smith','Max']; */
-    userObj:Array<any>=[
+    // userObj:Array<any>=[
 /*       { id:1, name:'John', email:'john@gmail.com'  }, 
       { id:2, name:'Smith', email:'smith@gmail.com'  }, 
       { id:3, name:'sam', email:'sam@gmail.com'  }, 
       { id:4, name:'Max', email:'max@gmail.com'  },  */
-    ];
+    // ];
 
    /*  constructor(){
       console.log(this.userObj.length);
     } */
   
-    addNewUser(){
-      let user={id:5,name:'User 1',email:'user1@gmail.com'};
+    // addNewUser(){
+      // let user={id:5,name:'User 1',email:'user1@gmail.com'};
       /**
        * Adds items to the list
        */
-      this.userObj.push(user);
-    }
+      // this.userObj.push(user);
+    // }
  /*    onDelete(user:object){
       let index=this.userObj.indexOf(user);
       console.log(index);
       this.userObj.splice(index,1);
 
     } */
-      onDelete(index:number){
+  /*     onDelete(index:number){
       // let index=this.userObj.indexOf(user);
       console.log(index);
       this.userObj.splice(index,1);
 
-    }
+    } */
 
 
 
@@ -265,5 +276,6 @@ uppercase(){
   } */
 
   
+
 
 }
