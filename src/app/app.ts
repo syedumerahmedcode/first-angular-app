@@ -2,7 +2,7 @@ import { Component, signal, ViewChild, AfterViewInit, ChangeDetectorRef, ViewCon
 import { RouterOutlet } from '@angular/router';
 import { AppNavbar } from "./navbar/navbar";
 import { Header } from './header/header';
-import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 // import { NgIf } from "../../node_modules/@angular/common/types/_common_module-chunk";
 import { NgIf, NgTemplateOutlet, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault, NgStyle, NgClass, NgComponentOutlet, 
   UpperCasePipe, LowerCasePipe, 
@@ -40,12 +40,22 @@ SlicePipe],
 })
 export class App /*implements AfterViewInit*/{
 
- fName=new FormControl();
- email=new FormControl();
- address=new FormControl();
+ userForm=new FormGroup({
+
+   fName: new FormControl(),
+   email: new FormControl(),
+   address: new FormControl()
+ });
+
+
+
 
  constructor(){
-  console.log(this.fName);
+  console.log(this.userForm.value.fName);  
+ }
+
+ onSubmitReactive(){
+  console.log(this.userForm);
   
  }
 
