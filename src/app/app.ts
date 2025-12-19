@@ -54,9 +54,18 @@ export class App /*implements AfterViewInit*/{
  constructor(){
   // console.log(this.userForm.value.fName);  
   this.form=new FormGroup({
-    fullName:new FormControl(),
-    email: new FormControl(),
-    address:new FormControl()
+    fullName:new FormControl('', 
+      [Validators.required, 
+        Validators.minLength(3)]
+      ),
+    email: new FormControl('', 
+      [Validators.required, 
+        Validators.email]
+      ),
+    address:new FormControl('', 
+      [Validators.required, 
+        Validators.minLength(10)]
+      )
   })
  }
 

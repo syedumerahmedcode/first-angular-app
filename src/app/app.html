@@ -430,16 +430,48 @@
         name="fullName"
         formControlName="fullName">
         
+        @if(form.get('fullName')?.touched && form.get('fullName')?.invalid){
+            @if(form.get('fullName')?.hasError('required')){
+                <p>Name cannot be empty.</p>
+            }
+            @if(form.get('fullName')?.hasError('minlength')){
+                <p>Name must be atleast 3 characters long.</p>
+            }
+        }
+
         <br><br>
         <input type="email" placeholder="Email" class="form-control" 
         name="email"
         formControlName="email">
+        <div class="alert">
+            @if(form.get('email')?.touched &&form.get('email')?.invalid){
+                @if(form.get('email')?.hasError('required')){
+                    <p>Email cannot be empty.</p>
+                }
+                @if(form.get('email')?.hasError('email')){
+                    <p>Please enter a valid e-mail address.</p>
+                }
+            }
+        </div>
         
+
+
         <br><br>
         <textarea cols="30" rows="10" placeholder="Address" class="form-control" 
         name="address"
         formControlName="address"></textarea>
-      
+        <div class="alert">
+            @if(form.get('address')?.touched &&form.get('address')?.invalid){
+                @if(form.get('address')?.hasError('required')){
+                    <p>Address cannot be empty.</p>
+                }
+                @if(form.get('address')?.hasError('minlength')){
+                    <p>Address must be atleast 10 characters long.</p>
+                }
+            }
+        </div>
+
+
         <br><br>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
