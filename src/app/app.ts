@@ -2,7 +2,7 @@ import { Component, signal, ViewChild, AfterViewInit, ChangeDetectorRef, ViewCon
 import { RouterOutlet } from '@angular/router';
 import { AppNavbar } from "./navbar/navbar";
 import { Header } from './header/header';
-import { FormControl, FormsModule } from '@angular/forms';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 // import { NgIf } from "../../node_modules/@angular/common/types/_common_module-chunk";
 import { NgIf, NgTemplateOutlet, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault, NgStyle, NgClass, NgComponentOutlet, 
   UpperCasePipe, LowerCasePipe, 
@@ -20,7 +20,7 @@ import { UserService } from './services/user.service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, AppNavbar, Header, FormsModule,
+  imports: [RouterOutlet, AppNavbar, Header, FormsModule,ReactiveFormsModule,
     NgIf, NgTemplateOutlet, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault,
     NgStyle, NgClass,
     PostList, Card, 

@@ -386,7 +386,8 @@
     </form> -->
 
     <form>
-        <input type="text" placeholder="Name">
+        <input type="text" placeholder="Name" [formControl]="fName">
+        <p>{{fName.value}}</p>
         <br><br>
         <input type="text" placeholder="email">
         <br><br>
