@@ -389,9 +389,11 @@
         <input type="text" placeholder="Name" [formControl]="fName">
         <p>{{fName.value}}</p>
         <br><br>
-        <input type="text" placeholder="email">
+        <input type="text" placeholder="email" [formControl]="email">
+        <p>{{email.value}}</p>
         <br><br>
-        <textarea></textarea>
+        <textarea [formControl]="address"></textarea>
+        <p>{{address.value}}</p>
         <br><br>
         <button>Submit</button>
     </form>

@@ -41,6 +41,8 @@ SlicePipe],
 export class App /*implements AfterViewInit*/{
 
  fName=new FormControl();
+ email=new FormControl();
+ address=new FormControl();
 
  constructor(){
   console.log(this.fName);
