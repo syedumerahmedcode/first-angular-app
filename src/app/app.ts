@@ -124,11 +124,11 @@ export class App /*implements AfterViewInit*/{
 
  addHobby(hobby:string){
   console.log(hobby);
-
   this.hobbies.push(new FormControl(hobby));
-  console.log(this.hobbies.value);
-  
-  
+  console.log(this.hobbies.value);  
+ }
+ removeHobby(index:number){
+  this.hobbies.removeAt(index);
  }
 
 

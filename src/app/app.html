@@ -502,8 +502,10 @@
         <br><br>
 
         <ul>
-                @for (hobby of hobbies.controls; track hobby) {
-                    <li>{{hobby.value}}</li>
+                @for (hobby of hobbies.controls; track $index) {
+                    <li>{{hobby.value}}
+                        <button (click)="removeHobby($index)">Delete</button>
+                    </li>
                 }
         </ul>
         
