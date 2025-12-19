@@ -385,7 +385,7 @@
         <button [disabled]="f.invalid">Submit</button>
     </form> -->
 
-    <form [formGroup]="userForm" (ngSubmit)="onSubmitReactive()">
+    <!-- <form [formGroup]="userForm" (ngSubmit)="onSubmitReactive()">
         <input type="text" placeholder="Name" formControlName="fName">
         <div class="alert">
         @if(userForm.get('fName')?.touched && userForm.get('fName')?.invalid){
@@ -423,5 +423,24 @@
         </div>
         <br><br>
         <button>Submit</button>
+    </form> -->
+
+    <form [formGroup]="form">
+        <input type="text" placeholder="Full Name" class="form-control" 
+        name="fullName"
+        formControlName="fullName">
+        
+        <br><br>
+        <input type="email" placeholder="Email" class="form-control" 
+        name="email"
+        formControlName="email">
+        
+        <br><br>
+        <textarea cols="30" rows="10" placeholder="Address" class="form-control" 
+        name="address"
+        formControlName="address"></textarea>
+      
+        <br><br>
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>

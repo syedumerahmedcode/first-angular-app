@@ -40,22 +40,28 @@ SlicePipe],
 })
 export class App /*implements AfterViewInit*/{
 
- userForm=new FormGroup({
+/*  userForm=new FormGroup({
 
    fName: new FormControl('', [Validators.required, Validators.minLength(3)]),
    email: new FormControl('', [Validators.required, Validators.email]),
    address: new FormControl('', [Validators.required, Validators.minLength(10)])
- });
+ }); */
+ form:any;
 
 
 
 
  constructor(){
   // console.log(this.userForm.value.fName);  
+  this.form=new FormGroup({
+    fullName:new FormControl(),
+    email: new FormControl(),
+    address:new FormControl()
+  })
  }
 
  onSubmitReactive(){
-  console.log(this.userForm);
+  // console.log(this.userForm);
   
  }
 
