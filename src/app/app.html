@@ -457,15 +457,15 @@
 
 
         <br><br>
-        <textarea cols="30" rows="10" placeholder="Address" class="form-control" 
-        name="address"
-        formControlName="address"></textarea>
+        <div formGroupName="address">
+        <textarea cols="30" rows="10"  class="form-control"         
+        ></textarea>
         <div class="alert">
-            @if(form.get('address')?.touched &&form.get('address')?.invalid){
-                @if(form.get('address')?.hasError('required')){
+            @if(form.get('address.street')?.touched &&form.get('address.street')?.invalid){
+                @if(form.get('address.street')?.hasError('required')){
                     <p>Address cannot be empty.</p>
                 }
-                @if(form.get('address')?.hasError('minlength')){
+                @if(form.get('address.street')?.hasError('minlength')){
                     <p>Address must be atleast 10 characters long.</p>
                 }
             }
@@ -473,6 +473,28 @@
 
 
         <br><br>
+
+        <input type="text" placeholder="City" class="form-control"
+        formControlName="city">
+        <div class="alert">
+            @if(form.get('address.city')?.touched &&form.get('address.city')?.invalid){
+                @if(form.get('address.city')?.hasError('required')){
+                    <p>city cannot be empty.</p>
+                }
+                @if(form.get('address.city')?.hasError('minlength')){
+                    <p>city must be atleast 10 characters long.</p>
+                }
+            }
+        </div>
+        <br><br>
+        <input type="text" placeholder="ZipCode" class="form-control"
+        formControlName="zipCode">
+        <br><br>
+        <input type="text" placeholder="Country" class="form-control"
+        formControlName="country">
+        <br><br>
+        </div>
+        
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>
