@@ -51,7 +51,7 @@ export class App /*implements AfterViewInit*/{
 
 
  constructor(){
-  console.log(this.userForm.value.fName);  
+  // console.log(this.userForm.value.fName);  
  }
 
  onSubmitReactive(){
