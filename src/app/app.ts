@@ -2,7 +2,7 @@ import { Component, signal, ViewChild, AfterViewInit, ChangeDetectorRef, ViewCon
 import { RouterOutlet } from '@angular/router';
 import { AppNavbar } from "./navbar/navbar";
 import { Header } from './header/header';
-import { FormArray, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormArray, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators, FormBuilder } from '@angular/forms';
 // import { NgIf } from "../../node_modules/@angular/common/types/_common_module-chunk";
 import { NgIf, NgTemplateOutlet, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault, NgStyle, NgClass, NgComponentOutlet, 
   UpperCasePipe, LowerCasePipe, 
@@ -81,7 +81,13 @@ export class App /*implements AfterViewInit*/{
     hobbies:new FormArray([])
   });
 
-
+/*  constructor(fb:FormBuilder){
+  fb.group({
+    fullName:['', [Validators.required, Validators.minLength(5)]],
+    email:['',[Validators.required, 
+        Validators.email]]
+  })
+ } */
 
 
  /* constructor(){
