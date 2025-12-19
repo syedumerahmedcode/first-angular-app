@@ -425,7 +425,7 @@
         <button>Submit</button>
     </form> -->
 
-    <form [formGroup]="form">
+    <form [formGroup]="form" (ngSubmit)="onSubmitReactive()">
         <input type="text" placeholder="Full Name" class="form-control" 
         name="fullName"
         formControlName="fullName">
@@ -509,6 +509,6 @@
                 }
         </ul>
         
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary" >Submit</button>
     </form>
 </div>

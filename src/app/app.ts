@@ -135,7 +135,7 @@ export class App /*implements AfterViewInit*/{
 
 
  onSubmitReactive(){
-  // console.log(this.userForm);
+  console.log(this.form);
   
  }
 
