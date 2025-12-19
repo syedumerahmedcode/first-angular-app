@@ -2,7 +2,7 @@ import { Component, signal, ViewChild, AfterViewInit, ChangeDetectorRef, ViewCon
 import { RouterOutlet } from '@angular/router';
 import { AppNavbar } from "./navbar/navbar";
 import { Header } from './header/header';
-import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormArray, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 // import { NgIf } from "../../node_modules/@angular/common/types/_common_module-chunk";
 import { NgIf, NgTemplateOutlet, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault, NgStyle, NgClass, NgComponentOutlet, 
   UpperCasePipe, LowerCasePipe, 
@@ -20,7 +20,8 @@ import { UserService } from './services/user.service';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, AppNavbar, Header, FormsModule,ReactiveFormsModule,
+  imports: [RouterOutlet, AppNavbar, Header, 
+    FormsModule,ReactiveFormsModule, 
     NgIf, NgTemplateOutlet, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault,
     NgStyle, NgClass,
     PostList, Card, 
@@ -46,14 +47,7 @@ export class App /*implements AfterViewInit*/{
    email: new FormControl('', [Validators.required, Validators.email]),
    address: new FormControl('', [Validators.required, Validators.minLength(10)])
  }); */
- form:any;
-
-
-
-
- constructor(){
-  // console.log(this.userForm.value.fName);  
-  this.form=new FormGroup({
+ form=new FormGroup({
     fullName:new FormControl('', 
       [Validators.required, 
         Validators.minLength(3)]
@@ -83,9 +77,62 @@ export class App /*implements AfterViewInit*/{
         [Validators.required, 
           Validators.minLength(3)]
         )
-    })
+    }),
+    hobbies:new FormArray([])
+  });
+
+
+
+
+ /* constructor(){
+  // console.log(this.userForm.value.fName);  
+  this.form=new FormGroup({
+    fullName:new FormControl('', 
+      [Validators.required, 
+        Validators.minLength(3)]
+      ),
+    email: new FormControl('', 
+      [Validators.required, 
+        Validators.email]
+      ),
+   /*  address:new FormControl('', 
+      [Validators.required, 
+        Validators.minLength(10)]
+      ) 
+    address: new FormGroup({
+        street:new FormControl('', 
+        [Validators.required, 
+          Validators.minLength(3)]
+        ),
+        city:new FormControl('', 
+        [Validators.required, 
+          Validators.minLength(3)]
+        ),
+        zipCode:new FormControl('', 
+        [Validators.required, 
+          Validators.minLength(3)]
+        ),
+        country:new FormControl('', 
+        [Validators.required, 
+          Validators.minLength(3)]
+        )
+    }),
+    hobbies:new FormArray([])
   })
+ } */
+ hobbies: FormArray=this.form.get('hobbies') as FormArray;
+
+ addHobby(hobby:string){
+  console.log(hobby);
+
+  this.hobbies.push(new FormControl(hobby));
+  console.log(this.hobbies.value);
+  
+  
  }
+
+
+
 
  onSubmitReactive(){
   // console.log(this.userForm);

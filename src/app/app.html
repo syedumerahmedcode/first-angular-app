@@ -494,6 +494,18 @@
         formControlName="country">
         <br><br>
         </div>
+
+        <!--form arrays-->
+        <label for="">Hobbies</label>
+        <br><br>
+        <input type="text" placeholder="Hobbies" #hobbyInput (keyup.enter)="addHobby(hobbyInput.value)">
+        <br><br>
+
+        <ul>
+                @for (hobby of hobbies.controls; track hobby) {
+                    <li>{{hobby.value}}</li>
+                }
+        </ul>
         
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
