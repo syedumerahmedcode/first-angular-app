@@ -1,5 +1,5 @@
 import { Component, signal, ViewChild, AfterViewInit, ChangeDetectorRef, ViewContainerRef, OnChanges } from '@angular/core';
-import { RouterOutlet, RouterModule, RouterLinkWithHref } from '@angular/router';
+import { RouterOutlet, RouterModule, RouterLinkWithHref, RouterLinkActive, RouterLink } from '@angular/router';
 import { AppNavbar } from "./navbar/navbar";
 import { Header } from './header/header';
 import { FormArray, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators, FormBuilder } from '@angular/forms';
@@ -22,7 +22,7 @@ import { noSpace } from './validators/nospace';
 @Component({
   selector: 'app-root',
    standalone: true,
-  imports: [RouterOutlet,
+  imports: [RouterOutlet, RouterLink,
     AppNavbar, Header,
     FormsModule, ReactiveFormsModule,
     NgIf, NgTemplateOutlet, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault,
@@ -38,7 +38,7 @@ import { noSpace } from './validators/nospace';
     CurrencyPipe,
     DatePipe,
     JsonPipe,
-    SlicePipe, RouterLinkWithHref],
+    SlicePipe, RouterLinkWithHref, RouterLinkActive],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

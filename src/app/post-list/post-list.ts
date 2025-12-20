@@ -1,21 +1,38 @@
 import { Component, Input, EventEmitter, Output } from '@angular/core';
 import { Card } from "../card/card";
-import { JsonPipe } from '@angular/common';
+import { JsonPipe, NgForOf } from '@angular/common';
 import { Profile } from "../profile/profile";
 import { User } from "../user/user";
 import { UserService } from '../services/user.service';
 import { PostService } from '../services/post';
 import { Post } from '../interfaces/post';
+import { RouterLink, Router } from "@angular/router";
 
 @Component({
   selector: 'app-post-list',
-  imports: [Card, JsonPipe, Profile, User],
+  imports: [Card, JsonPipe, Profile, User, RouterLink, NgForOf],
   standalone: true,
   templateUrl: './post-list.html',
   styleUrl: './post-list.css',
 })
 export class PostList {
-
+  posts=[
+    {
+      id:1,
+      title:"Title 1",
+      content:"Some long and boring text 1"
+    },
+    {
+      id:2,
+      title:"Title 2",
+      content:"Some long and boring text 2"
+    },
+    {
+      id:3,
+      title:"Title 3",
+      content:"Some long and boring text 3"
+    }
+  ]
 
 
 

@@ -19,3 +19,9 @@
     <!-- <li>{{posts | json}}</li>-->
 <!-- </ul>
 <button (click)="addPost()">Add post</button> -->
+
+
+ <div *ngFor="let post of posts; let index=index">
+    <h1>{{post.title}}</h1>
+    <button [routerLink]="['/post', index]">View Content</button>
+</div>
