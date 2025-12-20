@@ -17,6 +17,7 @@ import { PostList } from "./post-list/post-list";
 import { Card } from "./card/card";
 import { Profile } from "./profile/profile";
 import { UserService } from './services/user.service';
+import { noSpace } from './validators/nospace';
 
 @Component({
   selector: 'app-root',
@@ -50,12 +51,28 @@ export class App /*implements AfterViewInit*/{
  form=new FormGroup({
     fullName:new FormControl('', 
       [Validators.required, 
-        Validators.minLength(3)]
+        Validators.minLength(3)
+       
+      ]
       ),
     email: new FormControl('', 
       [Validators.required, 
         Validators.email]
       ),
+      username:new FormControl('',
+        [Validators.required,
+          Validators.minLength(3),
+           noSpace.noSpaceValidation
+        ]
+      ),
+      password:new FormControl('',
+        [Validators.required]
+      ),
+
+
+
+
+
    /*  address:new FormControl('', 
       [Validators.required, 
         Validators.minLength(10)]
@@ -80,6 +97,8 @@ export class App /*implements AfterViewInit*/{
     }),
     hobbies:new FormArray([])
   });
+
+  
 
 /*  constructor(fb:FormBuilder){
   fb.group({
