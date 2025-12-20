@@ -67,6 +67,7 @@ export class App implements OnInit /*implements AfterViewInit*/{
 
 
     );    
+    obsTest$.unsubscribe();
     //How subscribe works
     /* const obsTest=function(){
       console.log('printed from function');
