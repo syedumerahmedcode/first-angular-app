@@ -556,7 +556,7 @@
 
 <h1>Angular Blog site</h1>
 <button routerLink='/' routerLinkActive="active">Home</button>
-<button routerLink='/posts' routerLinkActive="active">Post list</button>
+<button routerLink='/posts' routerLinkActive="active" [queryParams]="{page:1,orderBy:'newest'}">Post list</button>
 <!--http://localhost:4200/posts will work after adding router-outlet directive-->
 <router-outlet></router-outlet>
 <!-- <app-post-list></app-post-list> -->

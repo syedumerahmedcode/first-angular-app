@@ -1,4 +1,4 @@
-import { Component, Input, EventEmitter, Output } from '@angular/core';
+import { Component, Input, EventEmitter, Output, OnInit } from '@angular/core';
 import { Card } from "../card/card";
 import { JsonPipe, NgForOf } from '@angular/common';
 import { Profile } from "../profile/profile";
@@ -6,7 +6,7 @@ import { User } from "../user/user";
 import { UserService } from '../services/user.service';
 import { PostService } from '../services/post';
 import { Post } from '../interfaces/post';
-import { RouterLink, Router } from "@angular/router";
+import { RouterLink, Router, ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-post-list',
@@ -15,7 +15,7 @@ import { RouterLink, Router } from "@angular/router";
   templateUrl: './post-list.html',
   styleUrl: './post-list.css',
 })
-export class PostList {
+export class PostList implements OnInit {
   posts=[
     {
       id:1,
@@ -34,10 +34,25 @@ export class PostList {
     }
   ]
 
+  constructor(private route: ActivatedRoute){
 
-
-
-
+  }
+  
+  ngOnInit(): void {
+    this.route.queryParamMap.subscribe(value=>{
+      console.log(value);
+      const page=value.get('page');
+      console.log(page);
+      const orderBy=value.get('orderBy');
+      console.log(orderBy);
+      
+    })
+  }
+  
+  
+  
+  
+  
 
 
 
