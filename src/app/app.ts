@@ -1,4 +1,4 @@
-import { Component, signal, ViewChild, AfterViewInit, ChangeDetectorRef, ViewContainerRef, OnChanges } from '@angular/core';
+import { Component, signal, ViewChild, AfterViewInit, ChangeDetectorRef, ViewContainerRef, OnChanges, OnInit } from '@angular/core';
 import { RouterOutlet, RouterModule, RouterLinkWithHref, RouterLinkActive, RouterLink } from '@angular/router';
 import { AppNavbar } from "./navbar/navbar";
 import { Header } from './header/header';
@@ -18,6 +18,7 @@ import { Card } from "./card/card";
 import { Profile } from "./profile/profile";
 import { UserService } from './services/user.service';
 import { noSpace } from './validators/nospace';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -42,8 +43,21 @@ import { noSpace } from './validators/nospace';
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
-export class App /*implements AfterViewInit*/{
+export class App implements OnInit /*implements AfterViewInit*/{
 
+  title='ang-routing';
+  
+
+  constructor(){
+
+  }
+  
+  ngOnInit(): void {
+    const obsTest$=new Observable(observer=>{
+      console.log('observer');
+      
+    }).subscribe();    
+  }
 
 
 
