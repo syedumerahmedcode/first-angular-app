@@ -1,5 +1,5 @@
 import { Component, signal, ViewChild, AfterViewInit, ChangeDetectorRef, ViewContainerRef, OnChanges } from '@angular/core';
-import { RouterOutlet, RouterModule } from '@angular/router';
+import { RouterOutlet, RouterModule, RouterLinkWithHref } from '@angular/router';
 import { AppNavbar } from "./navbar/navbar";
 import { Header } from './header/header';
 import { FormArray, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators, FormBuilder } from '@angular/forms';
@@ -22,25 +22,23 @@ import { noSpace } from './validators/nospace';
 @Component({
   selector: 'app-root',
    standalone: true,
-  imports: [RouterOutlet, 
-    
-    
-    AppNavbar, Header, 
-    FormsModule,ReactiveFormsModule, 
+  imports: [RouterOutlet,
+    AppNavbar, Header,
+    FormsModule, ReactiveFormsModule,
     NgIf, NgTemplateOutlet, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault,
     NgStyle, NgClass,
-    PostList, Card, 
-    NgComponentOutlet, 
+    PostList, Card,
+    NgComponentOutlet,
     Profile,
-UpperCasePipe,
-LowerCasePipe,
-TitleCasePipe,
-DecimalPipe,
-PercentPipe,
-CurrencyPipe,
-DatePipe,
-JsonPipe,
-SlicePipe],
+    UpperCasePipe,
+    LowerCasePipe,
+    TitleCasePipe,
+    DecimalPipe,
+    PercentPipe,
+    CurrencyPipe,
+    DatePipe,
+    JsonPipe,
+    SlicePipe, RouterLinkWithHref],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
