@@ -3,6 +3,7 @@ import { appConfig } from './app/app.config';
 import { provideRouter } from '@angular/router';
 import { App } from './app/app';
 import { PostList } from './app/post-list/post-list';
+import { Home } from './app/home/home';
 
 
 /* bootstrapApplication(App,  appConfig)
@@ -12,6 +13,7 @@ import { PostList } from './app/post-list/post-list';
 bootstrapApplication(App, {
   providers: [
     provideRouter([
+      { path: '', component: Home},
       { path: 'posts', component: PostList }
     ])
   ]
