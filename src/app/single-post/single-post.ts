@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import{ ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-single-post',
@@ -6,6 +8,16 @@ import { Component } from '@angular/core';
   templateUrl: './single-post.html',
   styleUrl: './single-post.css',
 })
-export class SinglePost {
+export class SinglePost implements OnInit{
+  constructor(private route: ActivatedRoute){
 
+  }
+  ngOnInit(): void {
+    this.route.paramMap.subscribe(value=>{
+      console.log(value);
+      let id=value.get('id');//router parameter defined in bootstrap file.
+      console.log('index acquired is: '+id);
+      
+    })
+  }
 }
