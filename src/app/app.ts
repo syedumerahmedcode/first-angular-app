@@ -1,5 +1,5 @@
 import { Component, signal, ViewChild, AfterViewInit, ChangeDetectorRef, ViewContainerRef, OnChanges, OnInit } from '@angular/core';
-import { RouterOutlet, RouterModule, RouterLinkWithHref, RouterLinkActive, RouterLink } from '@angular/router';
+import { RouterOutlet, RouterModule, RouterLinkWithHref, RouterLinkActive, RouterLink, Router } from '@angular/router';
 import { AppNavbar } from "./navbar/navbar";
 import { Header } from './header/header';
 import { FormArray, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators, FormBuilder } from '@angular/forms';
@@ -48,7 +48,7 @@ export class App implements OnInit /*implements AfterViewInit*/{
   title='ang-routing';
   
 
-  constructor(){
+  constructor(private router:Router){
 
   }
   
@@ -86,7 +86,19 @@ export class App implements OnInit /*implements AfterViewInit*/{
   }
 
 
+  onSubmit(){
+    /**Given direct path */
+    // this.router.navigate(['/posts']);
 
+    /**give router parameters */
+    // this.router.navigate(['/post',1, 'sometitle given here']);
+
+    /**Given query parameters in router */
+    this.router.navigate(['/posts'], {queryParams:{
+      page:1,
+      orderBy:'newest'
+    }});
+  }
 
 
 
