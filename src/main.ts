@@ -5,6 +5,7 @@ import { App } from './app/app';
 import { PostList } from './app/post-list/post-list';
 import { Home } from './app/home/home';
 import { SinglePost } from './app/single-post/single-post';
+import { Pagenotfound } from './app/pagenotfound/pagenotfound';
 
 
 /* bootstrapApplication(App,  appConfig)
@@ -16,7 +17,11 @@ bootstrapApplication(App, {
     provideRouter([
       { path: '', component: Home},
       { path: 'posts', component: PostList },
-      { path: 'post/:id/:title' , component:SinglePost}
+      { path: 'post/:id/:title' , component:SinglePost},
+      /**
+       * This wild card router must always be at the end of the router list . Otherwise, it is alqways selected.
+       */
+      { path: '**' , component: Pagenotfound}
     ])
   ]
 });
