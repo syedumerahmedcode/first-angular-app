@@ -56,7 +56,10 @@ export class App implements OnInit /*implements AfterViewInit*/{
     const obsTest$=new Observable(observer=>{
       observer.next('Returned from Observable');
       observer.next('Returned 2nd statement from Observable');
-      observer.next('Returned 3rd statement from Observable');
+      setTimeout(() => {
+        observer.next('Message from inside the timeout. This is written after 2nd statement from Observable')
+      }, 2000);
+      observer.next('Returned 3rd statement from Observable. This is executed aysnchronously');
       
     }).subscribe(value=>{
       console.log(value);      
