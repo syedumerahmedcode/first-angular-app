@@ -16,7 +16,55 @@ import { Post } from '../interfaces/post';
 })
 export class PostList {
 
-@Input() childUser:any;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+/* @Input() childUser:any;
 userService:any;
 postService:any;
 posts: Array<any>;
@@ -35,7 +83,7 @@ addPost(){
     post:'Dummy post 7'
   }
   this.postServiceDI.addPost(postData);
-}
+} */
 
 
 

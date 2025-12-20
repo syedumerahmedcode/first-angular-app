@@ -1,5 +1,5 @@
 import { Component, signal, ViewChild, AfterViewInit, ChangeDetectorRef, ViewContainerRef, OnChanges } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterModule } from '@angular/router';
 import { AppNavbar } from "./navbar/navbar";
 import { Header } from './header/header';
 import { FormArray, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators, FormBuilder } from '@angular/forms';
@@ -21,7 +21,11 @@ import { noSpace } from './validators/nospace';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, AppNavbar, Header, 
+   standalone: true,
+  imports: [RouterOutlet, 
+    
+    
+    AppNavbar, Header, 
     FormsModule,ReactiveFormsModule, 
     NgIf, NgTemplateOutlet, NgFor, NgSwitch, NgSwitchCase, NgSwitchDefault,
     NgStyle, NgClass,
@@ -42,13 +46,69 @@ SlicePipe],
 })
 export class App /*implements AfterViewInit*/{
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*  userForm=new FormGroup({
 
    fName: new FormControl('', [Validators.required, Validators.minLength(3)]),
    email: new FormControl('', [Validators.required, Validators.email]),
    address: new FormControl('', [Validators.required, Validators.minLength(10)])
  }); */
- form=new FormGroup({
+/*  form=new FormGroup({
     fullName:new FormControl('', 
       [Validators.required, 
         Validators.minLength(3)
@@ -67,7 +127,7 @@ export class App /*implements AfterViewInit*/{
       ),
       password:new FormControl('',
         [Validators.required]
-      ),
+      ), */
 
 
 
@@ -77,7 +137,7 @@ export class App /*implements AfterViewInit*/{
       [Validators.required, 
         Validators.minLength(10)]
       ) */
-    address: new FormGroup({
+    /* address: new FormGroup({
         street:new FormControl('', 
         [Validators.required, 
           Validators.minLength(3)]
@@ -97,7 +157,7 @@ export class App /*implements AfterViewInit*/{
     }),
     hobbies:new FormArray([])
   });
-
+ */
   
 
 /*  constructor(fb:FormBuilder){
@@ -145,7 +205,7 @@ export class App /*implements AfterViewInit*/{
     hobbies:new FormArray([])
   })
  } */
- hobbies: FormArray=this.form.get('hobbies') as FormArray;
+ /* hobbies: FormArray=this.form.get('hobbies') as FormArray;
 
  addHobby(hobby:string){
   console.log(hobby);
@@ -162,7 +222,7 @@ export class App /*implements AfterViewInit*/{
  onSubmitReactive(){
   console.log(this.form);
   
- }
+ } */
 
 
 
