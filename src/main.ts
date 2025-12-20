@@ -16,7 +16,7 @@ bootstrapApplication(App, {
     provideRouter([
       { path: '', component: Home},
       { path: 'posts', component: PostList },
-      { path: 'post/:id' , component:SinglePost}
+      { path: 'post/:id/:title' , component:SinglePost}
     ])
   ]
 });

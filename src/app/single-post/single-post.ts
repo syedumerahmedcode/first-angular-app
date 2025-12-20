@@ -17,6 +17,9 @@ export class SinglePost implements OnInit{
       console.log(value);
       let id=value.get('id');//router parameter defined in bootstrap file.
       console.log('index acquired is: '+id);
+
+      let title=value.get('title');//router parameter defined in bootstrap file.
+      console.log('title acquired is: '+title);
       
     })
   }
