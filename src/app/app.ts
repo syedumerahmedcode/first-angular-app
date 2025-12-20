@@ -54,9 +54,29 @@ export class App implements OnInit /*implements AfterViewInit*/{
   
   ngOnInit(): void {
     const obsTest$=new Observable(observer=>{
-      console.log('observer');
+      observer.next('Returned from Observable');
       
-    }).subscribe();    
+    }).subscribe(value=>{
+      console.log(value);      
+    }
+
+
+    );    
+    //How subscribe works
+    /* const obsTest=function(){
+      console.log('printed from function');
+      
+    };
+    obsTest(); */
+
+    /* //How next works
+    const obsTest=function(){
+      console.log('printed from function');
+      
+    };
+    const returnData=obsTest();
+    console.log(returnData); */
+    
   }
 
 
